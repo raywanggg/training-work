@@ -1,0 +1,242 @@
+.wholepage {
+	display: block;
+	width: 1190px;
+	margin: 0 auto;
+}
+.top {
+	display: block;
+	width: 100%;
+	height: 130px;
+	/*border: 1px solid black;*/
+}
+.left-wrap,.right-wrap {
+	float: left;
+	display: block;
+	height: 90px;
+	/*border: 1px solid black;*/	
+}
+.left-wrap {
+	/*mark1*/
+	width: 971px;
+	/*min-width: 840px;*/
+	margin-top: 32px;
+	margin-bottom: 8px;
+}
+.logo {
+	float: left;
+	width: 250px;
+	height: 100%;
+	position: relative;
+	/*border: 1px solid black;*/
+}
+.logo-picture {
+	display: inline-block;
+	cursor: pointer;
+	width: 142px;
+	height: 58px;
+	/*top: 8px;*/
+	margin: 8px 108px 24px 0;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;
+	background-position: 0 0; 
+	background-repeat: no-repeat;
+	/*border: 1px solid black;*/
+}
+.search {
+	float: left;
+	/*mark2*/
+	width: 721px;
+	/*min-width: 590px;*/
+	height: 100%;
+}
+.search-label {
+	height: 25px;
+}
+.search-blank {
+	position: relative;
+	height: 40px;
+}
+.search-category {
+	position: relative;
+	height: 25px;
+}
+.search-label ul li {
+	float: left;
+	width: 50px;
+	height: 100%;
+	line-height: 25px;
+	text-align: center;
+	font-size: 12px;
+	color: #3c3c3c;
+	cursor: pointer;
+}
+.search-pannel {
+	position: absolute;
+	left: 0;
+	width: 621px;
+	/*min-width: 490px;*/
+	/*height: 100%;padding不算高度所以height为100%会溢出*/
+	padding: 3px 0 3px 3px;
+	background-color: #ff5500;
+	color: #3c3c3c;
+}
+.panel {
+	width: 618px;
+	height: 34px;
+	background-color: #fff; 
+}
+/*.search-two,.search-thr {
+	display: none;
+}*/
+.search-content {
+	padding: 6px 0;
+	border: none;
+	outline: 0; 
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+	text-indent: 10px;
+}
+.search-confirm {
+	position: absolute;
+	right: 0;
+	width: 100px;
+	height: 100%;
+	text-align: center;
+}
+.confirm-button {
+	width: 100%;
+	height: 100%;
+	border: none;
+	color: #fff;
+	background-color: #ff4200;
+	/*font-weight: ?*/
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-indent: 5px;
+	cursor: pointer;
+	align-items: flex-start;
+	-webkit-writing-mode: horizontal-tb;
+}
+.confirm-button:hover {
+	background-color: #f52b00;
+}
+.search-more {
+	position: absolute;
+	right: 1px;
+	top: 4px;
+	width: 39px;
+	height: 18px;
+	font-size: 12px;
+	border: 1px solid #eeeeee;
+}
+/*.search-more:hover {
+	background-color: #ff4400;
+}*/
+a.more {
+	display: block;
+	padding: 0 10px 0 5px;
+	line-height: 18px;
+	color: #6c6c6c;
+}
+.arrow-right {
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: 4px;
+	width: 3px;
+	height: 6px;
+	color: #dadada;
+}
+.right-wrap {
+	position: relative;
+	width: 219px;
+	height: 114px;
+	margin-top: 12px;	
+}
+.highsearch {
+	position: absolute;
+	left: 0;
+	top: 38px;
+	width: 39px;
+	height: 39px;
+}
+.search-title {
+	padding: 3px 0 0 15px;
+}
+.search-title a:hover {
+	color: #ff4400;
+}
+.search-link {
+	color: #6c6c6c;
+	font-size: 12px;
+}	
+.codescan {
+	position: absolute;
+	right: 0;
+	width: 94px;
+	height: 112px;
+	border: 1px solid #eeeeee;
+	cursor: pointer;
+}
+.scan-title {
+	width: 80px;
+	height: 20px;
+	margin: 4px auto 0;
+}
+.scan-code {
+	width: 80px;
+	height: 80px;
+	margin: 0 8px 8px 8px;
+}
+.scan-close {
+	position: absolute;
+	left: -19px;
+	top: -1px;
+	width: 18px;
+	height: 18px;
+	border-top: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+span.text {
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #ff4400;
+}
+img.code {
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+img.close {
+	display: block;
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	top: 5px;
+	left: 4px;   /*close符号居中？*/
+	/*margin: auto;
+	margin-top: 4.5px;
+	margin-bottom: 4.5px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
