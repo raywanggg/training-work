@@ -3,6 +3,9 @@
 	width: 100%;
 	height: 528px;
 }
+.body-one:after {
+	clear: both;
+}
 /*整个body－one暂未清除浮动*/
 .body-left {
 	float: left;
