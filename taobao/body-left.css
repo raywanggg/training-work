@@ -149,7 +149,7 @@ span.fuwu {
 	border-color: #ff0000;
 	border-right-color: #fff;	
 }
-.market-content li a {
+.market-content a {
 	display: inline-block;
 	width: 37px;
 	height: 23px;
@@ -158,10 +158,10 @@ span.fuwu {
 	font-size: 12px;
 	margin-left: 3.75px;
 }
-.market-content li a:hover {
+.market-content a:hover {
 	color: #ff4400;
 }
-.market-content li img {
+.market-content img {
 	position: absolute;
 	display: block;
 	right: 10px;
@@ -169,8 +169,9 @@ span.fuwu {
 	width: 5px; 
 	height: 7px;
 }
-
+/*后三个部分*/
 .content-common {
+	position: relative;
 	display: inline-block;
 	font-size: 12px;
 	height: 24px;
@@ -179,6 +180,13 @@ span.fuwu {
 }
 .content-common:hover {
 	color: #ff4400;
+}
+/*右上角gif*/
+.sale-content img {
+	position: absolute;
+	top: 0;
+	width: 9px;
+	height: 14px;
 }
 .shop-one {
 	width: 58px;
