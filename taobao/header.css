@@ -4,6 +4,10 @@ body {
 	font-family: tahoma,arial,'Hiragino Sans GB',"Microsoft YaHei","黑体",sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
+button,input,select {
+	font-family: tahoma,arial,'Hiragino Sans GB',"Microsoft YaHei","黑体",sans-serif;
+	-webkit-font-smoothing: antialiased;	
+} 
 a{
     text-decoration: none;
 }
@@ -254,7 +258,7 @@ a.head-hover:hover {
 .content-blue a:hover {
 	background-color: #52a0e5;
 }
-
+/*导航以下的部分*/
 .wholepage {
 	display: block;
 	width: 1190px;
@@ -329,6 +333,32 @@ a.head-hover:hover {
 	color: #3c3c3c;
 	cursor: pointer;
 }
+/*初始状态*/
+.baobei-select {
+	color: #ffffff !important;
+	background-color: #ff5400;
+	font-weight: 700;
+}
+.tianmao:hover {
+	color: #c60000;
+	background-color: #f9e6e6;
+}
+.baobei:hover,.dianpu:hover {
+	color: #ff5400;
+	background-color: #ffeee5;
+}
+/*点击事件之后*/
+.tianmao-select {
+	color: #ffffff !important;
+	background-color: #c60000;
+	font-weight: 700;
+}
+.dianpu-select {
+	color: #ffffff !important;
+	background-color: #ff5400;
+	font-weight: 700;
+}
+
 .search-pannel {
 	position: absolute;
 	left: 0;
@@ -340,14 +370,48 @@ a.head-hover:hover {
 	color: #3c3c3c;
 }
 .panel {
+	position: relative;
 	width: 618px;
 	height: 34px;
-	background-color: #fff; 
+	background-color: #fff; 	
 }
-/*.search-two,.search-thr {
+.pic-image {
+	position: absolute;
+	left: 591.3px;
+	top: 8.3px;
+	width: 20px;
+	height: 20px;
+	background-image: url("img/pic-take.png");
+	background-size: 20px 45px;
+	background-position: 0 0; 
+	background-repeat: no-repeat;
+}
+.panel img {
+	position: absolute;
+	display: block;
+	top: 12px;
+	left: 12px;
+	width: 11px;
+	height: 12px;
+}
+.panel p {
+	position: absolute;
+	display: block;
+	top: 6px;
+	left: 31px;
+	width: auto;
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	color: #9c9c9c;
+}
+.panel .baobei-text {
+	display: block;
+}
+.panel .tianmao-text {
 	display: none;
-}*/
-.search-content {
+}
+input.search-content {
 	padding: 6px 0;
 	border: none;
 	outline: 0; 
@@ -381,6 +445,39 @@ a.head-hover:hover {
 .confirm-button:hover {
 	background-color: #f52b00;
 }
+.search-list {
+	padding-top: 5px;
+	padding-bottom: 2px;
+	height: 18px;
+	width: 679px;
+}
+.search-list a {
+	float: left;
+	display: block;
+	width: auto;
+	padding-right: 8px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+	color: #6c6c6c;
+}
+.search-list a:hover {
+	color: #ff4400;
+}
+.search-list a.list-orange {
+	color: #ff4400;
+}
+/*类选择器比上述hover多所以red不变*/
+.search-list a.list-red {
+	color: #c60000;
+}
+.list-one {
+	display: block;
+}
+.list-two {
+	display: none;
+}
+
 .search-more {
 	position: absolute;
 	right: 1px;
@@ -390,14 +487,17 @@ a.head-hover:hover {
 	font-size: 12px;
 	border: 1px solid #eeeeee;
 }
-/*.search-more:hover {
+.search-more:hover {
 	background-color: #ff4400;
-}*/
-a.more {
+}
+.more {
 	display: block;
 	padding: 0 10px 0 5px;
 	line-height: 18px;
 	color: #6c6c6c;
+}
+.search-more:hover .more {
+	color: #ffffff;
 }
 .arrow-right {
 	display: block;
