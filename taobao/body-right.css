@@ -34,6 +34,13 @@
 	font-size: 14px;
 	color: #3c3c3c;
 }
+.right-up li:hover {
+	cursor: pointer;
+	background-color: #f4f4f4;
+}
+.right-label:hover {
+	color: #ff4400;
+}
 .left-two {
 	width: 42px;
 }
@@ -196,7 +203,7 @@ img.division {
 	margin-left: -1px;
 	margin-right: -1px;
 }
-.part-label ul li {
+.part-label li {
 	float: left;
 	width: 56px;
 	height: 26px;
@@ -209,26 +216,27 @@ img.division {
 	background-color: #f7f7f7;
 }
 /*第一个和最后一个左右两侧有区别*/
-.part-label ul li.label-head {
+.label-head {
 	border-left: 1px solid #eeeeee;
 }
-.part-label ul li.label-tail {
+.label-tail {
 	border-right: 1px solid #eeeeee;
 }
-.part-label ul li:hover {
+/*hover的效果，优先级与.part-label li相同，靠后优先显示*/
+li.label-select {
 	border-left: 1px solid #eeeeee;
 	border-right: 1px solid #eeeeee;
 	border-bottom: none;
 	background-color: #ffffff;
-	font-weight: 700;
+	font-weight: 700;	
 }
-.part-label ul li a {
+.part-label a {
 	color: #3c3c3c;
 }
-.part-label ul li a:hover {
+.part-label a:hover {
 	color: #ff4400;
 }
-.part-content div ul li {
+.part-content li {
 	float: left;
 	display: block;
 	height: 25px;
@@ -236,10 +244,10 @@ img.division {
 	font-size: 12px;
 	overflow: hidden;
 }
-.part-content div ul li a {
+.part-content li a {
 	color: #3c3c3c;
 }
-.part-content div ul li a:hover {
+.part-content li a:hover {
 	color: #ff4400;
 }
 /*特殊颜色要求 添加important才显示*/
