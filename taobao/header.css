@@ -359,7 +359,7 @@ a.head-hover:hover {
 	font-weight: 700;
 }
 
-.search-pannel {
+.search-panel {
 	position: absolute;
 	left: 0;
 	width: 621px;
@@ -412,6 +412,8 @@ a.head-hover:hover {
 	display: none;
 }
 input.search-content {
+	/*怎样覆盖绝对定位的文字*/
+	/*z-index: 9998;*/
 	padding: 6px 0;
 	border: none;
 	outline: 0; 
@@ -443,7 +445,7 @@ input.search-content {
 	-webkit-writing-mode: horizontal-tb;
 }
 .confirm-button:hover {
-	background-color: #f52b00;
+	background-color: #f52b00 !important;
 }
 .search-list {
 	padding-top: 5px;
