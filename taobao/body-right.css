@@ -184,9 +184,11 @@ img.division {
 }
 .fou-part {
 	width: 290px;
-	height: 231px;
-	margin-left: 1px;
+	height: 225px;
+	/*margin-left: 1px;*/
 	position: relative;
+	overflow-y: hidden;
+	overflow-x: visible;
 }
 /*第一部分的标题和内容*/
 .part-label {
@@ -394,42 +396,42 @@ li.label-select {
 	color: #ff4400;
 }
 /*第四部分的标题和内容*/
-.fou-part ul li {
+.fou-part li {
 	float: left;
 	position: relative;
 	display: block;
 	width: 57px;
 	height: 72px;
 	margin-left: -1px;
-	/*margin-right: -1px;*/
 	border-left: 1px solid transparent;
 	border-right: 1px solid #eeeeee;
 	border-bottom: 1px solid #eeeeee;
 }
-.fou-part ul li.row-one:hover {
+.row-one:hover {
 	border-top: 1px solid #ff4400;
 	border-left: 1px solid #ff4400;
 	border-right: 1px solid #ff4400;
-	top: 1px;
+	border-bottom: 1px solid transparent;
 }
-.fou-part ul li.border-left {
+li.border-left {
+	margin-left: 0;
 	border-left: 1px solid #eeeeee;
 }
-.fou-part ul li.part-charge {
+li.part-charge {
 	width: 114px;
 	height: 145px;
 }
-.fou-part ul li.part-short {
+li.part-short {
 	width: 56px;
 }
 /*？图片对齐的问题*/
-.fou-part ul li a {
+.fou-part li a {
 	display: block;
 }
-.fou-part ul li a:hover span {
+.fou-part li a:hover span {
 	color: #ff4400;
 }
-.fou-part ul li a img {
+.fou-part li a img {
 	display: block;
 	margin-top: 12px;
 }
@@ -438,13 +440,18 @@ li.label-select {
 	width: 60px;
 	height: 60px;	
 }
+.img-big-hover {
+	padding: 6px 45px 5px;
+	width: 24px;
+	height: 25px;
+}
 .img-small {
 	padding: 6px 16px 5px;
 	width: 24px;
 	height: 25px;
 }
 /*文字不移动*/
-.fou-part ul li a span {
+.fou-part li a span {
 	display: block;
 	height: 18px;
 	line-height: 18px;
@@ -460,5 +467,14 @@ li.label-select {
 	margin: 0 0 6px;
 	width: 57px;
 }
-
+.extra-box {
+	display: none;
+	position: absolute;
+	top: 73px;
+	width: 288px;
+	height: 150px;
+	border: 1px solid #ff4400;
+	background-color: #ffffff;
+	z-index: 9000;
+}
 

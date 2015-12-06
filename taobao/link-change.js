@@ -17,6 +17,84 @@ $(".search-more").hover(function() {
 	$(".arrow-right").attr("src","img/gray_arrow_right.png");
 })
 
+//第四部分hover事件
+$(".part-charge").hover(function() {
+	$(this).css("height","72px").find("img").attr("src","img/phone.png").removeClass("img-big").addClass("img-big-hover");
+	$(".extra-box").css("display","block");
+},function() {
+	$(this).css("height","145px").find("img").attr("src","img/phone-60.png").removeClass("img-big-hover").addClass("img-big");
+	$(".extra-box").css("display","none");
+})
+
+//上下标签切换
+var isTotop = true;
+var isUpclick = false;
+var isDownclick = true;
+var down_sign = $(".down-sign");
+var up_sign = $(".up-sign");
+function upsign(x,y) {
+	var x,y;
+	x.css("background-color","#ff4400");
+	x.find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(180deg)");
+	y.css("background-color","#ffffff");
+	y.find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
+	if(isTotop == true) {
+		$(".updown-wrap").animate({
+			top:'-70px'
+		},"fast");
+		isTotop = false;
+	}
+	else {
+		$(".updown-wrap").animate({
+			top: '0'
+		},"fast");
+		isTotop = true;
+	}	
+}
+function downsign(x,y) {
+	var x,y;
+	x.css("background-color","#ff4400");
+	x.find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(0deg)");
+	y.css("background-color","#ffffff");
+	y.find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
+	if(isTotop == true) {
+		$(".updown-wrap").animate({
+			top:'-70px'
+		},"fast");
+		isTotop = false;
+	}
+	else {
+		$(".updown-wrap").animate({
+			top: '0'
+		},"fast");
+		isTotop = true;
+	}
+}
+$(".up-sign").click(function() {
+	upsign(up_sign,down_sign);
+	isUpclick = true;
+	isDownclick = false;
+}) 
+$(".down-sign").click(function() {
+	downsign(down_sign,up_sign);
+	isUpclick = false;
+	isDownclick = true;	
+}) 
+if (isUpclick == false) {
+	up_sign.hover(function() {
+		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(180deg)");
+	},function() {
+		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
+	})	
+}
+if (isDownclick == false) {
+	down_sign.hover(function() {
+		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(0deg)");
+	},function() {
+		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
+	})
+}
+
 //搜索栏的切换事件
 var list_one = $(".list-one");
 var list_two = $(".list-two");
@@ -116,5 +194,22 @@ label_hover (label_forum, content_forum);
 label_hover (label_secu, content_secu);
 label_hover (label_tail, content_bene);
 
-
-
+//中国制造图标的动画事件
+$(".made-image").hover(function() {
+	$(this).find("img").animate({
+		left:'5px'
+	},"fast");
+},function() {
+	$(this).find("img").animate({
+		left:'0'
+	},"fast");
+})
+$(".change-image").hover(function() {
+	$(this).find("img").animate({
+		left:'5px'
+	},"fast");
+},function() {
+	$(this).find("img").animate({
+		left:'0'
+	},"fast");
+})
