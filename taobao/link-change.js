@@ -1,13 +1,23 @@
+function isBlock(x) {
+	x.css("display","block");
+}
+function isNone(y) {
+	y.css("display","none");
+}
+
 //导航栏的hover事件
-$(".nav-right").find("li").hover(function() {
+var nav_right = $(".nav-right");
+var site_navigation = $(".sitenavigation");
+var last_hidden = $(".last-hidden");
+nav_right.find("li").hover(function() {
 	$(this).find(".right-hidden").css("display","block");
 },function() {
 	$(this).find(".right-hidden").css("display","none");
 })
-$(".sitenavigation").hover(function() {
-	$(".last-hidden").css("display","block");
+site_navigation.hover(function() {
+	isBlock(last_hidden);
 },function() {
-	$(".last-hidden").css("display","none");
+	isNone(last_hidden);
 })
 
 //"更多"的hover事件
@@ -18,13 +28,27 @@ $(".search-more").hover(function() {
 })
 
 //第四部分hover事件
-$(".part-charge").hover(function() {
-	$(this).css("height","72px").find("img").attr("src","img/phone.png").removeClass("img-big").addClass("img-big-hover");
-	$(".extra-box").css("display","block");
-},function() {
-	$(this).css("height","145px").find("img").attr("src","img/phone-60.png").removeClass("img-big-hover").addClass("img-big");
-	$(".extra-box").css("display","none");
-})
+var part_charge = $(".part-charge");
+var part_game = $(".part-game");
+var part_travel = $(".part-travel");
+var part_secu = $(".part-secu");
+var extra_one = $(".extra-one");
+var extra_two = $(".extra-two");
+var extra_thr = $(".extra-thr");
+var extra_fou = $(".extra-fou");
+function extraShow(x,y) {
+	x.hover(function() {
+		part_charge.css("height","72px").find("img").attr("src","img/phone.png").removeClass("img-big").addClass("img-big-hover");
+		isBlock(y);
+	},function() {
+		part_charge.css("height","145px").find("img").attr("src","img/phone-60.png").removeClass("img-big-hover").addClass("img-big");
+		isNone(y);
+	})
+}
+extraShow(part_charge,extra_one);
+extraShow(part_game,extra_two);
+extraShow(part_travel,extra_thr);
+extraShow(part_secu,extra_fou);
 
 //上下标签切换
 var isTotop = true;
