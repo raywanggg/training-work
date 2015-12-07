@@ -12,7 +12,7 @@
 }
 .right-down {
 	width: 100%;
-	height: 483px;
+	height: 485px;
 	margin-top: 7px;
 }
 /*分隔符两侧的样式*/
@@ -82,7 +82,7 @@ img.division {
 	float: left;
 	margin-left: 10px;
 	width: 290px;
-	height: 497px;
+	height: 485px;
 }
 /*图片轮换部分*/
 .one-container {
@@ -184,11 +184,12 @@ img.division {
 }
 .fou-part {
 	width: 290px;
-	height: 225px;
-	/*margin-left: 1px;*/
+	height: 219px;
 	position: relative;
-	overflow-y: hidden;
-	overflow-x: visible;
+}
+.fou-part ul {
+	height: 219px;
+	overflow: hidden;
 }
 /*第一部分的标题和内容*/
 .part-label {
@@ -408,10 +409,11 @@ li.label-select {
 	border-bottom: 1px solid #eeeeee;
 }
 .row-one:hover {
+	z-index: 9001;
 	border-top: 1px solid #ff4400;
 	border-left: 1px solid #ff4400;
 	border-right: 1px solid #ff4400;
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid #ffffff;
 }
 li.border-left {
 	margin-left: 0;
