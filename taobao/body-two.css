@@ -1,0 +1,198 @@
+.body-two {
+	width: 1188px;
+	height: 69px;
+	border: 1px solid #e8e8e8;
+	/*不是以pic-extra的485px衡量，而是左侧的483px*/
+	margin-top: 11px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.body-two:after {
+	clear: both;
+}
+.body-two div {
+	float: left;
+}
+.body-two a {
+	position: relative;
+	float: left;
+	display: block;	
+}
+.body-two a:hover {
+	color: #ff4400;
+}
+.two-left {
+	padding: 16px 17px 11px 17px;
+	width: 865px;
+	height: 42px;
+}
+.two-right {
+	width: 288px;
+	height: 69px;
+	border-left: 1px solid #e8e8e8;
+	overflow: hidden;
+}
+.updown-wrap {
+	position: relative;
+	top: 0;
+	width: 270px;
+	height: 140px;
+}
+.part-action,.part-raise {
+	width: 100%;
+	height: 70px;
+}
+
+/*两个四字标题*/
+.title-hot-reco {
+	width: 46px;
+	height: 100%;
+}
+.title-hot-reco h4 {
+	margin-top: 2px;
+	margin-right: 16px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #3c3c3c;
+}
+.hot-reco {
+	height: 42px;
+	border-right: 1px solid #e8e8e8;
+	margin-right: 20px;
+}
+.hot-content {
+	width: 189px; /*63*3*/
+	padding-right: 9px;
+}
+.reco-content {
+	width: 252px; /*63*4*/
+	padding-right: 8px;
+}
+.china-made {
+	margin-top: -1px;
+	width: 173px;
+}
+/*以上三个默认height:42px*/
+.two-change {
+	width: 157px;
+	height: 42px;
+	margin-top: 10px;
+	margin-left: 14px;
+}
+/*对应左边两个部分*/
+.hot-reco a {
+	width: 48px;
+	height: 20px;
+	line-height: 20px;
+	margin-right: 15px;
+	font-size: 12px;
+	color: #3c3c3c;
+}
+
+.made-long,.made-short {
+	height: 22px;
+	line-height: 22px;	
+	font-size: 12px;
+	color: #3c3c3c;
+}
+.made-long {
+	width: 48px;
+	margin-right: 15px;
+}
+.china-made .made-short {
+	width: 36px;
+	margin-right: 15px;
+}
+.two-change .made-short {
+	width: 36px;
+	margin-right: 10px;
+}
+/*对应图标*/
+.made-china {
+	margin: 5px 19px 2px 0;
+	width: 83px;
+	height: 15px;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;	
+	background-repeat: no-repeat;
+	background-position: 0 -118px;	
+}
+.tao-auction {
+	margin: 5px 8px 2px 0;
+	width: 83px;
+	height: 15px;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;	
+	background-repeat: no-repeat;
+	background-position: -146px 0;	
+}
+.tao-raise {
+	margin: 5px 15px 2px 0;
+	width: 78px;
+	height: 15px;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;	
+	background-repeat: no-repeat;
+	background-position: -146px -68px;
+}
+.made-image a {
+	width: 100px;
+	height: 45px;
+}
+/*hover移动动画见js*/
+.made-image img {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 45px;
+}
+.change-image a {
+	width: 90px;
+	height: 45px;
+	margin-top: 14px;
+	margin-left: -3px;
+	margin-bottom: 11px;
+}
+.change-image img {
+	position: relative;
+	display: block;
+	width: 90px;
+	height: 45px;
+}
+/*右上角gif*/
+.hot-reco img,.text-image img {
+	position: absolute;
+	top: 0;
+	width: 9px;
+	height: 14px;
+}
+
+/*针对整个body-two的绝对定位*/
+.updown-sign {
+	position: absolute;
+	right: -1px;
+	top: 23px;
+	width: 12px;
+	height: 24px;
+	border: 1px solid #ff4400;
+}
+.updown-sign div {
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+}
+.updown-sign div:hover {
+	background-color: #ff4400 !important;
+}
+.updown-sign img {
+	display: block;
+	width: 8px;
+	height: 4px;
+	margin: 4px 2px;
+}
+.up-sign {
+	background-color: #ffffff;
+}
+.down-sign {
+	background-color: #ff4400;
+}
