@@ -52,14 +52,15 @@ extraShow(part_secu,extra_fou);
 
 //上下标签切换
 var isTotop = true;
-var isUpclick = false;
-var isDownclick = true;
+// var isUpclick = false;
+// var isDownclick = true;
 var down_sign = $(".down-sign");
 var up_sign = $(".up-sign");
+var updown_wrap = $(".updown-wrap");
 function upsign(x,y) {
 	var x,y;
 	x.css("background-color","#ff4400");
-	x.find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(180deg)");
+	x.find("div").css("background-image","url('img/down_white.png')").css("-webkit-transform","rotate(180deg)");
 	y.css("background-color","#ffffff");
 	y.find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
 	if(isTotop == true) {
@@ -82,42 +83,42 @@ function downsign(x,y) {
 	y.css("background-color","#ffffff");
 	y.find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
 	if(isTotop == true) {
-		$(".updown-wrap").animate({
+		updown_wrap.animate({
 			top:'-70px'
 		},"fast");
 		isTotop = false;
 	}
 	else {
-		$(".updown-wrap").animate({
+		updown_wrap.animate({
 			top: '0'
 		},"fast");
 		isTotop = true;
 	}
 }
-$(".up-sign").click(function() {
+up_sign.click(function() {
 	upsign(up_sign,down_sign);
-	isUpclick = true;
-	isDownclick = false;
+	// isUpclick = true;
+	// isDownclick = false;
 }) 
-$(".down-sign").click(function() {
+down_sign.click(function() {
 	downsign(down_sign,up_sign);
-	isUpclick = false;
-	isDownclick = true;	
+	// isUpclick = false;
+	// isDownclick = true;	
 }) 
-if (isUpclick == false) {
-	up_sign.hover(function() {
-		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(180deg)");
-	},function() {
-		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
-	})	
-}
-if (isDownclick == false) {
-	down_sign.hover(function() {
-		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(0deg)");
-	},function() {
-		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
-	})
-}
+// if (isUpclick == false) {
+// 	up_sign.hover(function() {
+// 		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(180deg)");
+// 	},function() {
+// 		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
+// 	})	
+// }
+// if (isDownclick == false) {
+// 	down_sign.hover(function() {
+// 		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(0deg)");
+// 	},function() {
+// 		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
+// 	})
+// }
 
 //搜索栏的切换事件
 var list_one = $(".list-one");
