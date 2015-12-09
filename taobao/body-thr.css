@@ -1,5 +1,547 @@
 .body-thr {
-	width: 90px;
-	height: 200px;
-	border: 1px solid black;
+	width: 1190px;
+	height: 2000px;
 }
+.thr-left {
+	float: left;
+	width: 891px;
+}
+.thr-right {
+	float: left;
+	width: 290px;
+	margin-left: 9px;
+}
+/*以上height待定*/
+.tao-app {
+	margin-top: -1px;
+	width: 288px;
+	height: 92px;
+	border: 1px solid #e8e8e8;
+}
+.tao-story {
+	width: 288px;
+	height: 70px;
+	border: 1px solid #e8e8e8;
+	border-top: none;
+}
+.left-custome {
+	/*888*310*/
+	width: 864px;
+	height: 280px;
+	padding: 15px 12px;
+	border: 1px solid #e8e8e8;
+}
+.custome-main {
+	float: left;
+	width: 415px;
+	height: 100%;
+}
+.custome-pic {
+	float: right;
+	margin-right: 1px;
+	width: 440px;
+	height: 100%;
+}
+/*左侧*/
+/*上下两个都对应custome-title*/
+.custome-title {
+	/*width: ;*/
+	height: 22px;
+	font-size: 0;
+}
+.custome-title span {
+	display: inline-block;
+}
+.title-show {
+	width: 60px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 13px;
+	border-left: 2px solid #ff4400; 
+}
+.title-custome {
+	margin-left: -13px;	
+}
+.title-jewel {
+	margin-left: -16px;
+}
+.title-show a {
+	display: block;	
+	color: #3c3c3c;
+}
+.title-show:hover a{
+	color: #ff4400;
+}
+.title-hide {
+	display: none;
+}
+/*对应内容*/
+.custome-content {
+	width: 415px;
+	height: 248px;
+	padding-top: 12px;
+}
+.custome-content li {
+	width: 100%;
+	height: 31px;
+}
+.custome-content a {
+	float: left;
+	display: block;
+	height: 31px;
+	line-height: 31px;
+	font-size: 12px;
+	margin-right: 8.75px;
+	color: #3c3c3c;
+}
+.custome-content a:hover {
+	color: #ff4400;
+}
+a.content-bold {
+	width: 52px;
+	margin-right: 8.6px;
+	font-weight: bold;
+}
+a.content-color {
+	color: #ff4400;
+}
+/*右侧图片*/
+.custome-pic div {
+	float: left;
+	margin-left: 10px;
+	height: 280px;
+}
+.custome-pic a {
+	position: relative;
+	display: block;	
+}
+.custome-pic span {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: rgba(255,68,0,0.7);
+}
+.custome-pic a:hover img {
+	opacity:0.7;
+	transition: 0.3s;
+}
+.custome-pic a:hover span {
+	background-color: rgb(255,68,0);
+	transition: 0.3s;
+}
+.pic-left,.pic-right {
+	width: 135px;
+}
+.pic-left a,.pic-right a {
+	width: 135px;
+	height: 135px;
+}
+.pic-left img,.pic-right img {
+	width: 135px;
+	height: 135px;	
+}
+a.pic-top {
+	margin-top: 9px;
+}
+.pic-center {
+	width: 140px;
+}
+.pic-center a {
+	width: 140px;
+	height: 280px;
+}
+.pic-center img {
+	width: 140px;
+	height: 280px;	
+}
+/*上下两个方框的hover效果*/
+.left-custome:hover,.left-jewel:hover,.left-eat:hover {
+	border: 1px solid #ff4400;
+	transition: 0.8s;
+}
+.left-custome:hover .title-show,.left-jewel:hover .title-show {
+	border-left: 2px solid transparent;
+}
+.left-mix {
+	width: 891px;
+	height: 260px;
+	margin-top: 14px;
+	margin-left: -1px;
+}
+.left-outdoor,.left-child {
+	float: left;
+	width: 444px;
+	height: 258px;
+	border: 1px solid #e8e8e8;
+}
+.left-jewel,.left-child {
+	margin-left: -1px;	 
+}
+.left-jewel,.left-eat {
+	float: left;
+	width: 422px;
+	height: 228px;
+	padding: 15px 7px 15px 15px;
+	border: 1px solid #e8e8e8; 
+}
+.jewel-pic {
+	width: 422px;
+	height: 80px;
+	margin-top:16px; 
+}
+.jewel-ad,.jewel-made {
+	float: left;
+	width: 198px;
+	height: 80px;
+}
+.jewel-ad:hover img,.jewel-made:hover img {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+.jewel-ad:hover span {
+	color: #ff4400;
+	transition: 0.3s;
+}
+.jewel-ad img {
+	float: left;
+	width: 100px;
+	height: 80px;
+	margin-right: 8px;
+}
+.jewel-ad span {
+	float: left;
+	display: block;
+	height: 48px;
+	margin-top: 3px;
+	font-size: 12px;
+	line-height: 24px;
+	color: #6c6c6c;
+}
+.jewel-ad strong {
+	float: left;
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 24px;
+	color: #3c3c3c;
+}
+.jewel-made {
+	margin-left: 26px;
+}
+.jewel-made img {
+	width: 190px;
+	height: 80px;
+}
+/*珠宝与汇吃下面内容布局完全相同*/
+/*div*/
+.jewel-content,.eat-content {
+	width: 422px;
+	height: 90px;
+	padding-top: 6px;
+	border-top: 1px solid #e8e8e8;
+}
+.jewel-content {
+	margin-top: 16px;
+}
+.eat-content {
+	margin-top: 12px;
+}
+/*li*/
+.jewel-content li,.eat-content li {
+	float: left;
+	display: block;
+	width: 198px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+li.line-left {
+	overflow: visible;
+	width: 208px;
+	margin-right: 16px;
+}
+/*a*/
+.jewel-content a,.eat-content a {
+	float: left;
+	display: block;
+	color: #3c3c3c;
+	margin-right: 8.8px;
+}
+a.line-color {
+	color: #ff4400 !important;
+}
+.jewel-content a:hover {
+	color: #ff4400;
+}
+.line-first {
+	width: 52px;
+	font-weight: bold;
+}
+/*插入长图*/
+.left-insert {
+	width: 880px;
+	height: 70px;
+	margin-top: 12px;
+	margin-left: 6.5px;
+}
+.left-insert img {
+	display: block;
+	width: 880px;
+	height: 70px;
+}
+/*潮电街&极有家*/
+.left-fashion,.left-home {
+	position: relative;
+	width: 889px;
+	border: 1px solid #e8e8e8;
+	margin-top: 15px;
+	margin-left: -1px;
+}
+.left-fashion {
+	height: 258px;	
+}
+.left-home {
+	height: 310px;
+}
+
+.left-fashion:hover {
+	border: 1px solid #2eb5e7;
+	transition: 0.8s;
+}
+.left-home:hover {
+	border: 1px solid #ffcb00;
+	transition: 0.8s;	
+}
+
+.fashion-pic,.home-pic {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 320px;
+}
+.fashion-pic {
+	height: 258px;
+	background-color: #e2e2e2;
+}
+.home-pic {
+	height: 310px;
+	background-color: #fff8e3;
+}
+
+.pic-contain {
+	width: 320px;
+	height: 180px;
+}
+.pic-contain:hover img {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+/*.pic-contain img {
+	display: block;
+	width: 320px;
+	height: 180px;
+}*/
+.pic-bottom a:hover {
+	color: #ff4400;
+}
+.pic-on {
+	position: absolute;
+	display: block;
+	top: 54px;
+	left: 10px;
+	height: 44px;
+	padding: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #ffffff;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 18px;
+	line-height: 24px;
+}
+.pic-on em {
+	display: block;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	font-style: normal;
+	/*使其不为斜体*/
+}
+.pic-bottom {
+	position: absolute;
+	left: 20px;
+	bottom: 0;
+	width: 290px;
+	height: 66px;
+}
+.pic-bottom a {
+	float: left;
+	display: block;
+	width: 130px;
+	height: 26px;
+	line-height: 26px;
+	margin-right: 15px;
+	color: #3c3c3c;
+	font-size: 12px;
+}
+
+.fashion-content {
+	width: 545px;
+	height: 230px;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+.fashion-title,.eat-title {
+	width: 100%;
+	height: 20px;
+	margin-top: 1px;
+}
+.fashion-title a,.eat-title a {
+	display: block;
+	width: 94px;
+	height: 20px;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;	
+	background-repeat: no-repeat;	
+}
+.fashion-title a {
+	width: 94px;
+	background-position: 0 -58px;
+}
+.eat-title a {
+	width: 54px;
+	background-position: -91px -78px;
+}
+.fashion-show {
+	width: 545px;
+	height: 80px;
+	margin-top: 21px;
+}
+.fashion-show div {
+	float: left;
+	width: 170px;
+	height: 77px;
+	font-size: 12px;
+}
+.fashion-show div:hover img {
+	opacity: 0.8;
+	transition: 0.3s;	
+}
+.fashion-show div:hover span {
+	color: #ff4400;
+}
+/*fashion-show的children*/
+.fashion-show img {
+	float: left;
+	display: block;
+	width: 80px;
+	height: 70px;
+	margin-right: 8px;
+}
+.fashion-show span {
+	float: left;
+	display: block;
+	height: 18px;
+	line-height: 18px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	color: #6c6c6c;
+}
+.fashion-show em {
+	float: left;
+	display: block;
+	font-style: normal;
+	height: 26px;
+	line-height: 26px;
+	color: #3c3c3c;
+}
+.fashion-show strong {
+	float: left;
+	display: block;
+	box-sizing: border-box;
+	padding: 2px 5px;
+	height: 18px;
+	margin-top: 4px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #ff4400;
+}
+.fashion-list {
+	width: 545px;
+	height: 90px;
+	margin-top: 12px;
+	border-top: 1px solid #e8e8e8;
+	padding-top: 6px;
+}
+.fashion-list li {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+.fashion-list a {
+	float: left;
+	display: block;
+	font-size: 12px;
+	color: #3c3c3c;
+	margin-right: 8.8px;
+}
+.fashion-list a:hover {
+	color: #ff4400;
+}
+.list-left {
+	width: 210px;
+	margin-right: 2px;
+}
+
+/*eat-title与fashion-title背景图片使用相同,还要左移*/
+/*eat-show与fashion-show大体布局相同*/
+/*eat-content与jewel-content的总体列表布局相同*/
+.eat-show {
+	width: 422px;
+	height: 98px;
+}
+.eat-show div {
+	position: relative;
+	overflow: visible;
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin: 15px;
+}
+.eat-show img {
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin-right: 8px;
+	border-radius: 100%;
+	/*margin-right: 10px;*/
+}
+/*为什么溢出还是不可见？*/
+.eat-show span {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: -5px;
+	height: 16px;
+	line-height: 16px;
+	padding: 0 8px;
+	font-size: 12px;
+	color: #ffffff;
+	white-space: nowrap;
+}
+span.text-green {
+	background-color: #31a500;
+}
+span.text-orange {
+	background-color: #ff4400;
+}
+
+
+
