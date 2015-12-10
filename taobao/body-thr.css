@@ -1,6 +1,6 @@
 .body-thr {
 	width: 1190px;
-	height: 2800px;
+	height: 2601px;
 }
 .thr-left {
 	float: left;
@@ -130,7 +130,7 @@ a.content-color {
 	background-color: rgba(255,68,0,0.7);
 }
 .custome-pic a:hover img {
-	opacity:0.7;
+	opacity: 0.7;
 	transition: 0.3s;
 }
 .custome-pic a:hover span {
@@ -363,7 +363,8 @@ a.line-color {
 	border-radius: 100%; 
 }
 .pic-yellow a:hover img {
-	text-shadow: 1px black;
+	box-shadow: 0 0 10px #b59224;
+	transition: box-shadow 0.2s ease-in-out;
 }
 .pic-yellow span {
 	float: left;
@@ -453,18 +454,32 @@ a.line-color {
 	background-repeat: no-repeat;
 	background-position: -146px -48px;	
 }
-.scan-show {
+.home-title em {
 	float: left;
 	display: block;
 	margin-left: 9px;
 	margin-top: 3px;
+	font-style: normal;	
 	cursor: pointer;
+}
+.scan-show {
+	float: left;
+	display: block;
+	/*margin-left: 9px;
+	margin-top: 3px;
+	cursor: pointer;*/
+}
+/*区别于开始想到的fadein再animate的方法css使其透明度从0到1*/
+.home-title em:hover .scan-hide {
+	top: -2px;
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
 }
 .scan-hide {
 	position: absolute;
 	left: 87px;
-	top: 20px;
-	display: none;
+	top: 34px;
+	opacity: 0;
 	width: 140px;
 	height: 150px;
 	border: 1px solid #e8e8e8;
@@ -547,11 +562,11 @@ a.line-color {
 	width: 170px;
 	height: 110px;
 }
-.home-show a:hover img {
+.home-show a:hover img,.life-show a:hover img,.life-pic a:hover img {
 	opacity: 0.8;
 	transition: 0.3s;
 }
-.home-show a:hover span {
+.home-show a:hover span,.life-show a:hover span {
 	background-color: #ffffff;
 	color: #ff4400;
 }
@@ -712,7 +727,10 @@ a.line-color {
 	border-radius: 100%;
 	/*margin-right: 10px;*/
 }
-/*为什么溢出还是不可见？*/
+.eat-show a:hover img {
+	opacity: 0.8;
+	transition: 0.3s;
+}
 .eat-show span {
 	position: absolute;
 	display: block;
@@ -731,7 +749,18 @@ span.text-green {
 span.text-orange {
 	background-color: #ff4400;
 }
-
+/*相对左侧文字绝对定位*/
+.eat-show em {
+	position: absolute;
+	right: -8px;
+	border-right-color: #ffffff !important;
+}
+.text-green em {
+	border: 8px solid #31a500;
+}
+.text-orange em {
+	border: 8px solid #ff4400;
+}
 /*market集合*/
 .left-market {
 	position: relative;

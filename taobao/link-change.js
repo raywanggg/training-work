@@ -224,13 +224,13 @@ change_image.hover(function() {
 })
 
 //快来扫我的动画
-var scan_show = $(".scan-show");
-var scan_hide = $(".scan-hide");
-scan_show.hover(function() {
-	scan_hide.fadeIn(200).animate({top:'-2px'},"fast");
-},function(){
-	scan_hide.css("top","20px").css("display","none");
-})
+// var scan_show = $(".scan-show");
+// var scan_hide = $(".scan-hide");
+// scan_show.hover(function() {
+// 	scan_hide.fadeIn(200).animate({top:'-2px'},"fast");
+// },function(){
+// 	scan_hide.css("top","20px").css("display","none");
+// })
 
 
 
