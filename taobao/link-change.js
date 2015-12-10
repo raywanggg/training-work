@@ -50,10 +50,10 @@ extraShow(part_game,extra_two);
 extraShow(part_travel,extra_thr);
 extraShow(part_secu,extra_fou);
 
-//上下标签切换
-var isTotop = true;
+// 为什么标签对click之后的hover事件不起作用
 // var isUpclick = false;
 // var isDownclick = true;
+var isTotop = true;
 var down_sign = $(".down-sign");
 var up_sign = $(".up-sign");
 var updown_wrap = $(".updown-wrap");
@@ -62,7 +62,7 @@ function upsign(x,y) {
 	x.css("background-color","#ff4400");
 	x.find("div").css("background-image","url('img/down_white.png')").css("-webkit-transform","rotate(180deg)");
 	y.css("background-color","#ffffff");
-	y.find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
+	y.find("div").css("background-image","url('img/up_orange.png')").css("-webkit-transform","rotate(180deg)");
 	if(isTotop == true) {
 		$(".updown-wrap").animate({
 			top:'-70px'
@@ -79,9 +79,9 @@ function upsign(x,y) {
 function downsign(x,y) {
 	var x,y;
 	x.css("background-color","#ff4400");
-	x.find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(0deg)");
+	x.find("div").css("background-image","url('img/down_white.png')").css("-webkit-transform","rotate(0deg)");
 	y.css("background-color","#ffffff");
-	y.find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
+	y.find("div").css("background-image","url('img/up_orange.png')").css("-webkit-transform","rotate(0deg)");
 	if(isTotop == true) {
 		updown_wrap.animate({
 			top:'-70px'
@@ -97,28 +97,10 @@ function downsign(x,y) {
 }
 up_sign.click(function() {
 	upsign(up_sign,down_sign);
-	// isUpclick = true;
-	// isDownclick = false;
 }) 
 down_sign.click(function() {
 	downsign(down_sign,up_sign);
-	// isUpclick = false;
-	// isDownclick = true;	
 }) 
-// if (isUpclick == false) {
-// 	up_sign.hover(function() {
-// 		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(180deg)");
-// 	},function() {
-// 		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(0deg)");
-// 	})	
-// }
-// if (isDownclick == false) {
-// 	down_sign.hover(function() {
-// 		$(this).find("img").attr("src","img/down_white.png").css("-webkit-transform","rotate(0deg)");
-// 	},function() {
-// 		$(this).find("img").attr("src","img/up_orange.png").css("-webkit-transform","rotate(180deg)");
-// 	})
-// }
 
 //搜索栏的切换事件
 var list_one = $(".list-one");
@@ -220,7 +202,9 @@ label_hover (label_secu, content_secu);
 label_hover (label_tail, content_bene);
 
 //中国制造图标的动画事件
-$(".made-image").hover(function() {
+var made_image = $(".made-image");
+var change_image = $(".change-image");
+made_image.hover(function() {
 	$(this).find("img").animate({
 		left:'5px'
 	},"fast");
@@ -229,7 +213,7 @@ $(".made-image").hover(function() {
 		left:'0'
 	},"fast");
 })
-$(".change-image").hover(function() {
+change_image.hover(function() {
 	$(this).find("img").animate({
 		left:'5px'
 	},"fast");
@@ -238,3 +222,19 @@ $(".change-image").hover(function() {
 		left:'0'
 	},"fast");
 })
+
+//快来扫我的动画
+var scan_show = $(".scan-show");
+var scan_hide = $(".scan-hide");
+scan_show.hover(function() {
+	scan_hide.fadeIn(200).animate({top:'-2px'},"fast");
+},function(){
+	scan_hide.css("top","20px").css("display","none");
+})
+
+
+
+
+
+
+
