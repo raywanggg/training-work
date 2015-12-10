@@ -1,6 +1,6 @@
 .body-thr {
 	width: 1190px;
-	height: 2000px;
+	height: 2800px;
 }
 .thr-left {
 	float: left;
@@ -176,13 +176,7 @@ a.pic-top {
 	margin-top: 14px;
 	margin-left: -1px;
 }
-.left-outdoor,.left-child {
-	float: left;
-	width: 444px;
-	height: 258px;
-	border: 1px solid #e8e8e8;
-}
-.left-jewel,.left-child {
+.left-jewel {
 	margin-left: -1px;	 
 }
 .left-jewel,.left-eat {
@@ -192,6 +186,17 @@ a.pic-top {
 	padding: 15px 7px 15px 15px;
 	border: 1px solid #e8e8e8; 
 }
+/*place-hold图片放置*/
+.place-left,.place-right {
+	float: left;
+	width: 444px;
+	height: 258px;
+	border: 1px solid #e8e8e8;
+}
+.place-right {
+	margin-left: -1px;	
+}
+/*珠宝部分*/
 .jewel-pic {
 	width: 422px;
 	height: 80px;
@@ -255,13 +260,12 @@ a.pic-top {
 	margin-top: 12px;
 }
 /*li*/
-.jewel-content li,.eat-content li {
+.jewel-content li,.eat-content li,.home-list li {
 	float: left;
 	display: block;
 	width: 198px;
 	height: 30px;
 	line-height: 30px;
-	font-size: 12px;
 }
 li.line-left {
 	overflow: visible;
@@ -269,16 +273,17 @@ li.line-left {
 	margin-right: 16px;
 }
 /*a*/
-.jewel-content a,.eat-content a {
+.jewel-content a,.eat-content a,.home-list a,.life-content a {
 	float: left;
 	display: block;
+	font-size: 12px;
 	color: #3c3c3c;
 	margin-right: 8.8px;
 }
 a.line-color {
 	color: #ff4400 !important;
 }
-.jewel-content a:hover {
+.jewel-content a:hover,.eat-content a:hover,.home-list a:hover,.life-content a:hover {
 	color: #ff4400;
 }
 .line-first {
@@ -300,16 +305,18 @@ a.line-color {
 /*潮电街&极有家*/
 .left-fashion,.left-home {
 	position: relative;
-	width: 889px;
 	border: 1px solid #e8e8e8;
-	margin-top: 15px;
-	margin-left: -1px;
 }
 .left-fashion {
+	width: 889px;
 	height: 258px;	
+	margin-left: -1px;
+	margin-top: 15px;
 }
 .left-home {
+	width: 888px;
 	height: 310px;
+	margin-top: 14px;
 }
 
 .left-fashion:hover {
@@ -335,22 +342,48 @@ a.line-color {
 	height: 310px;
 	background-color: #fff8e3;
 }
-
+/*极有家右侧上部*/
+.pic-yellow {
+	height: 60px;
+	background-color: #ffd255;
+	/*overflow: visible;*/
+}
+.pic-yellow a {
+	float: left;
+	display: block;
+	width: 33.33%;
+	height: 100%;
+}
+.pic-yellow img {
+	float: left;
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin: 12px;
+	border-radius: 100%; 
+}
+.pic-yellow a:hover img {
+	text-shadow: 1px black;
+}
+.pic-yellow span {
+	float: left;
+	display: block;
+	width: 28px;
+	height: 32px;
+	margin-top: 14px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #3c3c3c;
+}
+/*极有家与潮电街中部图片大小相同*/
 .pic-contain {
+	position: relative;
 	width: 320px;
 	height: 180px;
 }
 .pic-contain:hover img {
-	opacity: 0.7;
+	opacity: 0.8;
 	transition: 0.3s;
-}
-/*.pic-contain img {
-	display: block;
-	width: 320px;
-	height: 180px;
-}*/
-.pic-bottom a:hover {
-	color: #ff4400;
 }
 .pic-on {
 	position: absolute;
@@ -364,15 +397,18 @@ a.line-color {
 	color: #ffffff;
 	background-color: rgba(0,0,0,0.4);
 	font-size: 18px;
-	line-height: 24px;
+/*	line-height: 24px;*/
 }
 .pic-on em {
 	display: block;
 	font-size: 14px;
-	height: 20px;
-	line-height: 20px;
+	height: 24px;
+	line-height: 22px;
 	font-style: normal;
 	/*使其不为斜体*/
+}
+.pic-bottom a:hover {
+	color: #ff4400;
 }
 .pic-bottom {
 	position: absolute;
@@ -380,6 +416,9 @@ a.line-color {
 	bottom: 0;
 	width: 290px;
 	height: 66px;
+}
+.home-pic .pic-bottom {
+	height: 63px;
 }
 .pic-bottom a {
 	float: left;
@@ -391,7 +430,157 @@ a.line-color {
 	color: #3c3c3c;
 	font-size: 12px;
 }
-
+/*极有家左侧内容*/
+.home-content {
+	width: 554px;
+	height: 280px;
+	margin-top: 18px;
+	margin-left: 12px;
+	margin-bottom: 12px;
+}
+.home-title {
+	position: relative;
+	width: 100%;
+	height: 23px;
+}
+.home-logo {
+	float: left;
+	display: block;
+	width: 80px;
+	height: 20px;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;	
+	background-repeat: no-repeat;
+	background-position: -146px -48px;	
+}
+.scan-show {
+	float: left;
+	display: block;
+	margin-left: 9px;
+	margin-top: 3px;
+	cursor: pointer;
+}
+.scan-hide {
+	position: absolute;
+	left: 87px;
+	top: 20px;
+	display: none;
+	width: 140px;
+	height: 150px;
+	border: 1px solid #e8e8e8;
+	background-color: #ffffff;
+	cursor: pointer;
+	z-index: 9998;
+}
+.scan-hide img {
+	display: block;
+	width: 96px;
+	height: 96px;
+	margin-top: 17px;
+	margin-left: 22px;
+}
+.scan-hide strong {
+	display: block;
+	width: 100px;
+	height: 12px;
+	line-height: 12px;
+	margin-top: 14px;
+	margin-left: 22px;
+	text-indent: 1px;
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: normal;
+}
+.home-more {
+	float: left;
+	display: block;
+	margin-left: 212px;
+	white-space: nowrap;
+}
+.home-more a {
+	float: left;
+	display: block;
+	width: 24px;
+	height: 13px;
+	line-height: 13px;
+	margin-left: 9px;
+	margin-right: 6px;
+	font-size: 12px;
+	color: #3c3c3c;
+}
+.home-more a:hover {
+	color: #ff4400;
+}
+.home-more span {
+	float: left;
+	display: block;
+	width: 5px;
+	height: 10px;
+	line-height: 10px;
+	color: #6c6c6c;
+	font-weight: 100;
+}
+.home-list {
+	float: left;
+	width: 190px;
+	height: 240px;
+	margin-top: 10px;
+}
+.home-show {
+	float: left;
+	margin-left: -5px;
+	margin-top: 18px;
+	width: 360px;
+	height: 240px;
+}
+.home-show a {
+	position: relative;
+	float: left;
+	display: block;
+	width: 170px;
+	height: 110px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.home-show img {
+	display: block;
+	width: 170px;
+	height: 110px;
+}
+.home-show a:hover img {
+	opacity: 0.8;
+	transition: 0.3s;
+}
+.home-show a:hover span {
+	background-color: #ffffff;
+	color: #ff4400;
+}
+.home-show span {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 118px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #3c3c3c;
+	font-size: 12px;
+	background-color: rgba(255,255,255,0.8);
+}
+.home-show strong {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 58px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: rgba(255,202,0,0.9);
+}
+/*潮电街左侧内容*/
 .fashion-content {
 	width: 545px;
 	height: 230px;
@@ -541,6 +730,98 @@ span.text-green {
 }
 span.text-orange {
 	background-color: #ff4400;
+}
+
+/*market集合*/
+.left-market {
+	position: relative;
+	width: 879px;
+	height: 250px;
+	border: 1px solid #e8e8e8;
+	margin-top: 12px;
+}
+.market-head {
+	width: 879px;
+	height: 30px;
+}
+.market-head li {
+	float: left;
+	width: 91px;
+	height: 28px;
+	border-top: 2px solid transparent;
+	margin-top: -1px;
+	color: #6c6c6c;
+	cursor: pointer;
+}
+.market-head strong {
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	margin-top: 8px;
+	padding: 0 15px;
+	font-size: 15px;
+	font-weight: 700;
+	border-right: 1px solid #e8e8e8;
+}
+.market-head li:hover {
+	color: #3c3c3c;
+}
+li.market-selected {
+	border-top-color: #ff4400;
+}
+.market-selected strong {
+	color: #3c3c3c;
+}
+.life-show {
+	width: 540px;
+	height: 110px;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+.life-show a {
+	position: relative;
+	float: left;
+	display: block;
+	width: 170px;
+	height: 110px;
+	margin-right: 10px;
+}
+.life-show img {
+	display: block;
+	width: 170px;
+	height: 110px;
+}
+.life-show span {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-size: 12px;
+	color: #3c3c3c;
+	background-color: rgba(255,255,255,0.8);
+}
+.life-content {
+	margin-left: 15px;
+	margin-top: 11px;
+	width: 540px;
+	height: 60px;
+}
+.life-content li {
+	float: left;
+	display: block;
+	width: 175px;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 5px;
+}
+.life-pic {
+	position: absolute;
+	right: 0;
+	top: 50px;
+	width: 320px;
+	height: 180px;
 }
 
 
