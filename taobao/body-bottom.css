@@ -1,0 +1,20 @@
+.body-bottom {
+	width: 1190px;
+	height: 500px;
+	margin-top: 48px;
+}
+.tao-help {
+	width: 1190px;
+	height: 140px;
+}
+.help-common {
+	float: left;
+	width: 25%;
+	height: 95px;
+	margin-right: -1px;
+}
+.help-wrap {
+	height: 100%;
+	padding: 0 25px;
+	border-right: 1px solid #eeeeee;
+}
