@@ -1,13 +1,497 @@
 .body-fou {
 	width: 1190px;
-	height: 365px;
+	height: 1497px;
 	margin-top: 12px;
 }
-.body-fou div {
+/*第一部分*/
+.list-six,.item-six {
+	display: block;
+	width: 1190px;
+	clear: both;	
+}
+.list-six {
+	height: 365px;
+}
+.item-six {
+	margin-top: 20px;
+	height: 265px;
+}
+/*通过hover时候z－index的改变来改变边框颜色切position：relative？*/
+.fou-list,.fou-item {
+	position: relative;
 	float: left;
 	width: 169px;
-	height: 335px;
 	padding: 14px;
 	border: 1px solid #e8e8e8;
 	margin-left: -1px;
+	z-index: 1;
 }
+.fou-list {
+	height: 335px;
+}
+.fou-item {
+	height: 235px;	
+}
+.fou-list:hover,.fou-item:hover {
+	border: 1px solid #ff4400;
+	z-index: 10;
+}
+.go-global {
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 13px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.farm-title {
+	display: block;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: bold;	
+}
+ .go-global a,.farm-title a {
+	color: #3c3c3c;
+ }
+
+.farm-pic {
+	width: 100%;
+	height: 203px;
+	margin-top: 8px;
+}
+.farm-big {
+	width: 100%;
+	height: 98px;
+}
+.farm-small {
+	float: left;
+	display: block;
+	width: 80px;
+	height: 91px;
+	margin-top: 14px;
+}
+.farm-big img {
+	display: block;
+	width: 169px;
+	height: 72px;
+}
+.farm-big span,.farm-small span {
+	display: block;
+	height: 14px;
+	line-height: 14px;
+	font-size: 12px;
+	color: #3c3c3c;
+	text-align: center;
+}
+.farm-big span {
+	width: 169px;
+	margin-top: 10px;
+}
+.farm-small span {
+	width: 80px;
+	margin-top: 7px;
+}
+.farm-last {
+	margin-left: 8px;
+}
+.farm-small img {
+	display: block;
+	width: 80px;
+	height: 70px;
+}
+
+.go-abroad {
+	width: 100%;
+	height: 150px;
+	margin-top: 7px;
+	background-color: #f5f5f5;
+}
+.go-abroad img {
+	display: block;
+	width: 169px;
+	height: 100px;
+}
+.go-abroad strong {
+	display: block;
+	margin-top: 9px;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #3c3c3c;
+	text-align: center;
+}
+.go-abroad span {
+	display: block;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;	
+	height: 14px;
+	line-height: 13px;
+	font-size: 12px;
+	color: #9c9c9c;
+	text-align: center;
+}
+
+.go-other {
+	width: 100%;
+	height: 145px;
+	margin-top: 13px;
+}
+.other-one {
+	width: 178px;
+	height: 93px;
+}
+.other-one a {
+	float: left;
+	display: block;
+	width: 80px;
+	height: 93px;
+	margin-right: 9px;
+}
+.other-one img {
+	display: block;
+	width: 80px;
+	height: 70px;
+}
+.other-one span {
+	display: block;
+	width: 80px;
+	height: 16px;
+	line-height: 16px;
+	margin-top: 7px;
+	font-size: 12px;
+	color: #3c3c3c;
+	text-align: center;
+}
+.other-two,.other-thr {
+	width: 169px;
+	height: 18px;
+	margin-top: 8px;
+}
+.other-two a {
+	float: left;
+	display: block;
+	/*height: 18px;*/
+	line-height: 18px;
+	font-size: 12px;
+	padding-right: 5px;
+	border-right: 1px solid #e1e1e1;
+	margin-right: 2px;
+	color: #3c3c3c;
+}
+.other-thr span {
+	float: left;
+	display: block;
+	color: #e1e1e1;
+	margin-right: 3px;
+	line-height: 18px;
+	font-size: 12px;
+}
+.other-thr a {
+	float: left;
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+}
+.little-title {
+	color: #ff4400;
+}
+.little-content {
+	color: #3c3c3c;
+}
+/*第二部分*/
+.guang-title {
+	width: 1190px;
+	height: 26px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.guang-title a {
+	display: block;
+	height: 26px;
+	color: #3c3c3c;
+}
+.guang-title span {
+	position: relative;
+	top: 4px;
+	width: 62px;
+	height: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	text-indent: -9999px;
+	/*针对含有二维码的并排布局*/
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url("img/TB.png");
+	background-size: 229px 193px;
+	background-position: -146px -83px;
+	background-repeat: no-repeat;
+}
+/*第三部分*/
+.guang-pic {
+	float: left;
+	overflow: hidden;
+	width: 802px;
+	height: 180px;
+	/*margin-top: 10px;*/
+}
+.guang-pic li {
+	position: relative;
+	float: left;
+	display: block;
+	width: 148px;
+	height: 180px;
+	margin-right: 12px;
+}
+.guang-pic img {
+	width: 148px;
+	height: 180px;	
+}
+.guang-pic p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	color: #3c3c3c;
+	text-align: center;
+	background-color: rgba(255,255,255,0.8);
+}
+.guang-pic li:hover p,.farm-pic a:hover span {
+	background-color: #ffffff;
+	color: #ff4400;
+}
+.go-abroad:hover img,.other-one a:hover img,.guang-pic li:hover img,.farm-pic a:hover img {
+	opacity: 0.8;
+	transition: 0.3s;
+}
+.go-abroad:hover strong,.other-one a:hover span,.other-two a:hover,.other-thr a:hover,.sale-head a:hover {
+	color: #ff4400;
+}
+.guang-right {
+	overflow: hidden;
+	display: block;
+	width: 388px;
+	height: 180px;
+}
+.right-change {
+	float: left;
+	display: block;
+	width: 216px;
+	height: 180px;
+	margin-right: 20px;
+}
+.right-fix {
+	float: left;
+	display: block;
+	width: 152px;
+	height: 180px;
+}
+.right-fix div {
+	width: 152px;
+	height: 70px;
+}
+.right-fix div a {
+	float: left;
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin-right: 3px;
+}
+.right-fix img {
+	display: block;
+	width: 70px;
+	height: 70px;
+}
+.right-fix ul {
+	width: 152px;
+	height: 96px;
+	margin-top: 14px;
+}
+.right-fix li {
+	height: 24px;
+	line-height: 24px;
+}
+.right-fix li a {
+	font-size: 12px;
+	color: #3c3c3c;
+}
+.right-fix li a:hover {
+	color: #ff4400;
+}
+/*第四部分见上*/
+/*第五部分*/
+.hot-sale {
+	width: 1190px;
+	height: 585px;
+	margin-top: 31px;
+}
+.sale-head {
+	width: 100%;
+	height: 32px;
+}
+.head-first {
+	float: left;
+	display: block;
+	width: 72px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 18px;
+	color: #3c3c3c;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-right: 18px;
+}
+.sale-head a {
+	float: left;
+	display: block;
+	height: 14px;
+	line-height: 14px;
+	border-right: 1px solid #e8e8e8;
+	padding: 0 10px;
+	margin-top: 6px;
+	margin-left: -1px;
+	font-size: 12px;
+	color: #6c6c6c;
+}
+/*sale-show的半响应式布局*/
+.sale-list {
+	width: 1190px;
+	height: 398px;
+}
+.sale-show {
+	width: 1190px;
+}
+.sale-list li {
+	float: left;
+	height: 100%;
+	margin-left: 1px;/*为子元素div的border流出空位*/
+}
+.vertical-one {
+	width: 19.6%; 
+}
+.vertical-two {
+	width: 13.5%;
+}
+/*区别以下两张布局见笔记*/
+.sale-list div,.sale-show li {
+	position: relative;
+	z-index: 1;
+	float: left;
+	display: block;
+	padding-top: 10px;
+	border: 1px solid #e8e8e8;
+	margin-top: -1px;/*为竖直有两个div重合border*/
+}
+.vertical-one div {
+	width: 100%;
+	height: 387px;
+}
+.vertical-two div {
+	width: 100%;
+	height: 188px; 
+}
+.sale-show li {
+	width: 31.5%;
+	padding: 10px;
+}
+/*理解为在与原来的z-index是相对上层的所以用relative*/
+.sale-show li:hover,.sale-list div:hover {
+	border-color: #ff4400;
+	z-index: 10;
+}
+.sale-list p {
+	position: relative;
+	display: block;	
+	margin: 0 auto;
+}
+.vertical-one p {
+	width: 214px;
+	height: 387px;
+}
+.vertical-two p {
+	width: 139px;
+	height: 188px; 
+}
+.vertical-one img {
+	display: block;
+	width: 214px;
+	height: 214px;
+}
+.vertical-two img {
+	display: block;
+	width: 139px;
+	height: 139px;
+}
+.vertical-one .line-one {
+	margin: 14px 0 3px 0;
+	font-size: 16px;
+}
+.vertical-two .line-one {
+	margin-top: 8px;
+	font-size: 12px;
+}
+.line-one {
+	display: block;
+	height: 18px;
+	line-height: 18px;
+	font-weight: 700;
+	font-family: arial;
+	color: #ff4400;
+}
+.line-two {
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	font-family: arial;
+	color: #9c9c9c;	
+}
+.line-thr {
+	display: block;
+	margin-top: 10px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	color: #6c6c6c;
+}
+.line-fou {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 5px;
+	height: 19px;
+	line-height: 19px;
+	font-size: 12px;
+	color: #9c9c9c;
+}
+.line-fou span {
+	float: left;
+	display: block;
+	margin-right: 10px;
+}
+.line-fou em {
+	float: left;
+	display: block;
+	font-style: normal;
+}
+.sale-left {
+	margin-left: 1px;
+}
+.sale-center,.sale-right {
+	margin-left: -1px;
+}
+/*height为图片默认的高度*/
+.sale-show img {
+	display: block;
+	width: 100%;
+}
+
+
