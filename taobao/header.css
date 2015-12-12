@@ -28,8 +28,10 @@ ul {
 .head-nav:after {
 	clear: both;
 }
+/*通过最大最小的宽度设置使其不会挤压出界*/
 .nav-content {
 	max-width: 1190px;
+	min-width: 950px;
 	height: 35px;
 	margin: 0 auto;
 }
