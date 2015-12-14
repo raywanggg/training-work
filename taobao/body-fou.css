@@ -1,6 +1,6 @@
 .body-fou {
 	width: 1190px;
-	height: 1497px;
+	height: 1501px;
 	margin-top: 12px;
 }
 /*第一部分*/
@@ -401,6 +401,7 @@
 .sale-show li {
 	width: 31.5%;
 	padding: 10px;
+	padding-bottom: 14px;
 }
 /*理解为在与原来的z-index是相对上层的所以用relative*/
 .sale-show li:hover,.sale-list div:hover {
