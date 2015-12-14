@@ -1,7 +1,6 @@
 .body-bottom {
 	width: 1190px;
-	height: 500px;
-	margin-top: 48px;
+	margin-top: 44px;
 }
 .tao-help {
 	width: 1190px;
@@ -17,4 +16,167 @@
 	height: 100%;
 	padding: 0 25px;
 	border-right: 1px solid #eeeeee;
+}
+.help-wrap p {
+	display: block;
+	width: 100%;
+	height: 32px;
+	margin-top: 7px;
+}
+.help-wrap img {
+	float: left;
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+.help-wrap span {
+	float: left;
+	display: block;
+	padding-top: 5px;
+	margin-left: 12px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #3c3c3c;
+}
+.help-wrap ul {
+	display: block;
+	margin-top: 14px;
+	width: ;
+	height: 42px;
+}
+.help-wrap a {
+	float: left;
+	display: block;
+	height: 21px;
+	line-height: 21px;
+	margin-right: 13px;
+	font-size: 12px;
+	color: #9c9c9c;
+}
+.tao-foot {
+	width: 1190px;
+	height: 140px;/*140待定*/
+	border-top: 2px solid #ff5400;
+}
+.foot-one {
+	width: 100%;
+	height: 62px;
+	padding-top: 7px;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+.foot-one p {
+	display: block;
+	width: 100%;
+	height: 27px;
+}
+.foot-one a {
+	float: left;
+	display: block;
+	height: 27px;
+	line-height: 27px;
+	margin: 0 4px;
+	font-size: 12px;
+	color: #6c6c6c;
+}
+.foot-one b,.foot-two b {
+	float: left;
+	display: block;
+	width: 4.594px;
+	font-weight: 300;
+	color: #dddddd;
+	margin: 0 3px;
+}
+.foot-one b {
+	line-height: 27px;
+}
+.foot-two b {
+	line-height: 18px;
+}
+.foot-two {
+	width: 100%;
+	height: 52px;
+	margin-top: 8px;
+}
+.foot-two p {
+	display: block;
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	padding-bottom: 8px;
+}
+.foot-two a {
+	margin: 0 4px;
+	font-size: 12px;
+	color: #6c6c6c;	
+}
+.footline-one a {
+	float: left;
+}
+.footline-one em {
+	float: left;
+	display: block;
+	margin-left: 30px;
+	font-size: 12px;
+	font-style: normal;
+	color: #9c9c9c;	
+}
+.footline-two span {
+	float: left;
+	display: block;
+	margin: 0 4px;
+	font-size: 12px;
+	color: #9c9c9c;
+	white-space: nowrap;
+}
+.foot-thr {
+	width: 100%;
+	height: 40px;
+}
+.foot-thr a {
+	float: left;
+	display: block;
+	height: 40px;
+	margin-right: 15px;
+	background-image: url("img/TB-two.png");
+	background-size: 529px 200px;	
+	background-repeat: no-repeat;
+}
+a.footer-one {
+	background: none;
+}
+.footer-one img {
+	display: block;
+	width: 36px;
+	height: 36px;
+}
+.footer-two {
+	width: 30px;
+	background-position: 0 -140px;
+}
+.footer-thr {
+	width: 33px;
+	background-position: -40px -140px;	
+}
+.footer-fou {
+	width: 50px;
+	background-position: -80px -140px;	
+}
+.footer-fiv {
+	width: 83px;
+	background-position: -140px -140px;
+}
+.footer-six {
+	width: 94px;
+	background-position: -240px -140px;
+}
+.footer-sev {
+	width: 93px;
+	background-position: -345px -140px;	
+}
+.footer-eig {
+	width: 83px;
+	background-position: -446px -140px;
 }
