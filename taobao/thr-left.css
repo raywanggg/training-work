@@ -6,24 +6,6 @@
 	float: left;
 	width: 891px;
 }
-.thr-right {
-	float: left;
-	width: 290px;
-	margin-left: 9px;
-}
-/*以上height待定*/
-.tao-app {
-	margin-top: -1px;
-	width: 288px;
-	height: 92px;
-	border: 1px solid #e8e8e8;
-}
-.tao-story {
-	width: 288px;
-	height: 70px;
-	border: 1px solid #e8e8e8;
-	border-top: none;
-}
 .left-custome {
 	/*888*310*/
 	width: 864px;
