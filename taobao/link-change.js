@@ -51,56 +51,31 @@ extraShow(part_travel,extra_thr);
 extraShow(part_secu,extra_fou);
 
 // 为什么标签对click之后的hover事件不起作用
-// var isUpclick = false;
-// var isDownclick = true;
 var isTotop = true;
-var down_sign = $(".down-sign");
-var up_sign = $(".up-sign");
 var updown_wrap = $(".updown-wrap");
-function upsign(x,y) {
-	var x,y;
-	x.css("background-color","#ff4400");
-	x.find("div").css("background-image","url('img/down_white.png')").css("-webkit-transform","rotate(180deg)");
-	y.css("background-color","#ffffff");
-	y.find("div").css("background-image","url('img/up_orange.png')").css("-webkit-transform","rotate(180deg)");
+var sign_common = $(".sign-common");
+sign_common.click(function() {
 	if(isTotop == true) {
-		$(".updown-wrap").animate({
+		updown_wrap.animate({
 			top:'-70px'
 		},"fast");
 		isTotop = false;
 	}
 	else {
-		$(".updown-wrap").animate({
+		updown_wrap.animate({
 			top: '0'
 		},"fast");
 		isTotop = true;
+	}
+	if ($(this).hasClass("up-sign")) {
+		$(this).addClass("up-click").removeClass("up-sign");
+		$(this).siblings().addClass("down-unclick").removeClass("down-sign");
 	}	
-}
-function downsign(x,y) {
-	var x,y;
-	x.css("background-color","#ff4400");
-	x.find("div").css("background-image","url('img/down_white.png')").css("-webkit-transform","rotate(0deg)");
-	y.css("background-color","#ffffff");
-	y.find("div").css("background-image","url('img/up_orange.png')").css("-webkit-transform","rotate(0deg)");
-	if(isTotop == true) {
-		updown_wrap.animate({
-			top:'-70px'
-		},"fast");
-		isTotop = false;
+	if ($(this).hasClass("down-unclick")) {
+		$(this).addClass("down-sign").removeClass("down-unclick");
+		$(this).siblings().addClass("up-sign").removeClass("up-click");
 	}
-	else {
-		updown_wrap.animate({
-			top: '0'
-		},"fast");
-		isTotop = true;
-	}
-}
-up_sign.click(function() {
-	upsign(up_sign,down_sign);
-}) 
-down_sign.click(function() {
-	downsign(down_sign,up_sign);
-}) 
+})
 
 //搜索栏的切换事件
 var list_one = $(".list-one");
