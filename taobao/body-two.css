@@ -181,40 +181,37 @@
 	width: 12px;
 	height: 12px;
 }
-/*.updown-sign img {
-	display: block;
-	width: 8px;
-	height: 4px;
-	margin: 4px 2px;
-}*/
+.sign-common {
+	background-size: 8px 4px;	
+	background-position: 2px 4px;
+	background-repeat: no-repeat;	
+}
 .up-sign {
 	background-color: #ffffff;
+	background-image: url("img/up_orange.png");
 }
 .down-sign {
 	background-color: #ff4400;
-}
-.up-sign div,.down-sign div {
-	width: 8px;
-	height: 4px;
-	margin: 4px 2px;
-	background-size: 8px 4px;	
-	background-repeat: no-repeat;	
-}
-.up-sign div {
-	background-image: url("img/up_orange.png");
-}
-.down-sign div{
 	background-image: url("img/down_white.png");
 }
-/*hover弊端是click之后css不起作用*/
-/*.updown-sign div:hover {
+/*上标签点击之后与hover效果相同，下标签变成未点击状态*/
+.up-sign:hover {
 	background-color: #ff4400;
-}
-.up-sign:hover div {
 	background-image: url("img/down_white.png");
-	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);	
 }
-.down-sign:hover div {
+.up-click {
+	background-color: #ff4400;
+	background-image: url("img/down_white.png");
+	transform: rotate(180deg);
+}
+.down-unclick {
+	background-color: #ffffff;
 	background-image: url("img/up_orange.png");
-	-webkit-transform: rotate(180deg);
-}*/
+	transform: rotate(180deg);
+}
+.down-unclick:hover {
+	background-color: #ff4400;
+	background-image: url("img/down_white.png");
+	transform: rotate(0deg);
+}
