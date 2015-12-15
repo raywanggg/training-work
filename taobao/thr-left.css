@@ -25,16 +25,12 @@
 	height: 100%;
 }
 /*左侧*/
-/*上下两个都对应custome-title*/
 .custome-title {
 	/*width: ;*/
 	height: 22px;
-	font-size: 0;
-}
-.custome-title span {
-	display: inline-block;
 }
 .title-show {
+	float: left;
 	width: 60px;
 	height: 22px;
 	line-height: 22px;
@@ -43,12 +39,6 @@
 	padding-left: 13px;
 	border-left: 2px solid #ff4400; 
 }
-.title-custome {
-	margin-left: -13px;	
-}
-.title-jewel {
-	margin-left: -16px;
-}
 .title-show a {
 	display: block;	
 	color: #3c3c3c;
@@ -56,8 +46,52 @@
 .title-show:hover a{
 	color: #ff4400;
 }
+.title-custome {
+	margin-left: -13px;	
+}
+.title-jewel {
+	margin-left: -16px;
+}
 .title-hide {
-	display: none;
+	position: relative;
+	left: -10px;
+	opacity: 0;
+	float: left;
+	height: 18px;
+	line-height: 18px;
+	padding: 0 6px;
+	border-radius: 2px;
+	background-color: #f8f5da;
+	border: 1px solid #f5dead;
+	margin-top: 2px;
+	margin-left: 12px;
+	font-size: 12px;
+}
+.title-hide a {
+	display: block;	
+	color: #c65c22;	
+}
+.title-hide span {
+	position: absolute;
+	left: -12px;
+	top: 4px;
+	border: 6px solid transparent;
+	border-right-color: #f5dead;
+}
+.title-hide em {
+	position: absolute;
+	left: -10px;
+	top: 5px;
+	border: 5px solid transparent;
+	border-right-color: #f8f5da;
+}
+.left-custome:hover .title-hide,
+.left-jewel:hover .title-hide,
+.left-fashion:hover .title-hide,
+.left-eat:hover .title-hide {
+	left: 0;
+	opacity: 1;
+	transition: all 0.6s ease-in-out;
 }
 /*对应内容*/
 .custome-content {
@@ -146,6 +180,7 @@ a.pic-top {
 }
 /*上下两个方框的hover效果*/
 .left-custome:hover,.left-jewel:hover,.left-eat:hover {
+	z-index: 10;
 	border: 1px solid #ff4400;
 	transition: 0.8s;
 }
@@ -162,6 +197,8 @@ a.pic-top {
 	margin-left: -1px;	 
 }
 .left-jewel,.left-eat {
+	position: relative;
+	z-index: 1;
 	float: left;
 	width: 422px;
 	height: 228px;
@@ -589,7 +626,12 @@ a.line-color {
 	height: 20px;
 	margin-top: 1px;
 }
-.fashion-title a,.eat-title a {
+.fashion-title .title-hide,
+.eat-title .title-hide {
+	margin-top: 0;
+}
+.fashion-back,.eat-back {
+	float: left;
 	display: block;
 	width: 94px;
 	height: 20px;
@@ -597,11 +639,11 @@ a.line-color {
 	background-size: 229px 193px;	
 	background-repeat: no-repeat;	
 }
-.fashion-title a {
+.fashion-back {
 	width: 94px;
 	background-position: 0 -58px;
 }
-.eat-title a {
+.eat-back {
 	width: 54px;
 	background-position: -91px -78px;
 }
