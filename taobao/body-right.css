@@ -381,19 +381,49 @@ li.label-select {
 	background-repeat: no-repeat;
 	background-position: -146px -103px;
 }
-.thr-part a {
+.back-text {
+	position: relative;
 	float: left;
 	display: block;
 	margin-top: 10px;
+	width: 200px;
+	height: 24px;
+	overflow: hidden;
+}
+.back-wrap {
+	position: absolute;
+	height: 72px;
+	top: 0;
+	transition-duration: 0.5s;
+	transform: translate3d(0px,0px,0px);	
+}
+/*.back-wrap {
+	position: absolute;
+	height: 72px;
+	top: 0;
+	transition-duration: 0.5s;
+	transform: translate3d(0px,-24px,0px);
+}
+.back-wrap {
+	position: absolute;
+	height: 72px;
+	top: 0;
+	transition-duration: 0.5s;
+	transform: translate3d(0px,-48px,0px);
+}*/
+.back-wrap div {
+	display: block;
 	height: 24px;
 	line-height: 24px;
 	font-size: 12px;
-	color: #3c3c3c;
 }
-.thr-part a:hover {
+.back-wrap a {
+	color: #3c3c3c;	
+}
+.back-wrap a:hover {
 	color: #ff4400;
 }
-.thr-part a span {
+.back-wrap span {
 	color: #ff4400;
 }
 /*第四部分的标题和内容*/
