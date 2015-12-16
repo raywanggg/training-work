@@ -91,7 +91,7 @@ window.onload = function() {
         animate(520);
         buttonStyle();
     }
-
+    //按钮点击
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].onclick = function () {
             if (isAnimated) {         //如果切换还在进行，则直接结束，直到切换完成
