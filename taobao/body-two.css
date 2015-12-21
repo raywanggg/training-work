@@ -1,5 +1,42 @@
+/*！响应式布局四：body－two*/
+@media screen and (min-width: 1190px) {
+	.body-two {
+		width: 1188px;
+	}
+	.two-left {
+		width: 868px;
+	}
+	.two-right {
+		width: 288px;
+	}
+	.reco-content {
+		width: 252px; /*63*4*/
+	}
+	.china-made {
+		width: 176px;
+	}
+}
+@media screen and (max-width: 1189px) {
+	.body-two {
+		width: 988px;
+	}
+	.two-left {
+		width: 678px;
+	}
+	.two-right {
+		width: 278px;
+	}	
+	.reco-content {
+		width: 128px;
+	}
+	.china-made {
+		width: 114px;
+	}	
+	.made-image {
+		margin-left: -4px;
+	}
+}
 .body-two {
-	width: 1188px;
 	height: 69px;
 	border: 1px solid #e8e8e8;
 	/*不是以pic-extra的485px衡量，而是左侧的483px*/
@@ -22,12 +59,10 @@
 	color: #ff4400;
 }
 .two-left {
-	padding: 16px 17px 11px 17px;
-	width: 865px;
+	padding: 15px 14px 12px 17px;
 	height: 42px;
 }
 .two-right {
-	width: 288px;
 	height: 69px;
 	border-left: 1px solid #e8e8e8;
 	overflow: hidden;
@@ -65,12 +100,13 @@
 	padding-right: 9px;
 }
 .reco-content {
-	width: 252px; /*63*4*/
+	overflow: hidden;
 	padding-right: 8px;
 }
 .china-made {
+	overflow: hidden;
+	height: 42px;
 	margin-top: -1px;
-	width: 173px;
 }
 /*以上三个默认height:42px*/
 .two-change {

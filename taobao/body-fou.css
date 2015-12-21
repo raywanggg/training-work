@@ -1,36 +1,199 @@
+/*！响应式布局六：body－fou*/
+@media screen and (min-width: 1190px) {
+	.body-fou {
+		width: 1190px;
+	}
+	.list-six {
+		width: 1190px;
+		height: 365px;
+		/*子元素全为float时候塌陷解决用height？*/
+	}
+	.item-six {
+		width: 1190px;
+		height: 265px;
+	}
+
+	.fou-list,.fou-item {
+		width: 169px;
+		padding: 14px;
+	}	
+	.fou-list {
+		height: 335px;
+	}
+	.fou-item {
+		height: 235px;	
+	}
+
+	.go-abroad {
+		width: 100%;
+	}
+	.go-other {
+		width: 100%;
+		margin-top: 13px;
+	}
+	.other-one {
+		width: 178px;
+	}
+	.other-one a {
+		width: 80px;
+		margin-right: 9px;
+	}
+	.listpic-change {
+		width: 169px;
+		height: 335px;
+	}
+	.guang-pic {
+		width: 802px;
+	}
+	.guang-pic li {
+		width: 148px;
+	}
+	.farm-pic {
+		height: 203px;
+	}
+	.farm-big {
+		width: 100%;
+	}
+	.farm-big img {
+		width: 169px;
+	}
+	.farm-small {
+		margin-top: 12px;
+	}
+	.hot-sale,.sale-list,.sale-show {
+		width: 1190px;
+	}
+	.hot-sale {
+		margin-top: 31px;
+	}
+	.sale-head {
+		width: 100%;
+	}
+	.head-first {
+		margin-right: 18px;
+	}
+	.vertical-one {
+		width: 19.6%; 
+	}
+	.vertical-two {
+		width: 13.5%;
+	}
+	.sale-show li {
+		padding: 10px 10px 14px 10px;
+	}
+}
+@media screen and (max-width: 1189px) {
+	.body-fou {
+		width: 990px;
+	}
+	.list-six {
+		width: 990px;
+		height: 409px;
+	}
+	.item-six {
+		width: 990px;
+		height: 309px;
+	}
+
+	.fou-list,.fou-item {
+		width: 308px;
+		padding: 14px 10px 11px;
+		margin-top: -1px;
+	}
+	.fou-list {
+		height: 175px;
+	}
+	.fou-item {
+		height: 128px;
+	}
+
+	.go-abroad {
+		float: left;
+		width: 150px;
+	}	
+	.go-other {
+		float: right;
+		width: 150px;
+		margin-top: 7px;
+	}
+	.other-one {
+		width: 100%;
+	}
+	.other-one a {
+		width: 70px;
+		margin: 0 2px;
+	}
+	.listpic-change {
+		width: 308px;
+		height: 175px;
+	}
+	.guang-pic {
+		width: 602px;
+	}
+	.guang-pic li {
+		width: 138px;
+	}
+	.farm-pic {
+		height: 96px;
+	}
+	.farm-big {
+		width: 132px;
+	}
+	.farm-big img {
+		width: 120px;
+	}
+	.farm-small {
+		margin-top: 0;
+	}
+	.farmpic-change {
+		width: 308px;
+		height: 128px;
+	}
+	.hot-sale,.sale-list,.sale-show {
+		width: 990px;
+	}
+	.hot-sale {
+		margin-top: 29px;
+	}
+	.sale-head {
+		width: 980px;
+	}
+	.head-first {
+		margin-right: 38px;
+	}
+	.vertical-one {
+		width: 22.7%; 
+	}
+	.vertical-two {
+		width: 15.6%;
+	}
+	.vertical-last {
+		display: none;
+	}
+	.sale-show li {
+		padding: 8px 8px 12px 8px;
+	}
+}
+
 .body-fou {
-	width: 1190px;
-/*	height: 1501px;*/
 	margin-top: 12px;
+/*	height: 1501px;响应式高度会改变*/
 }
 /*第一部分*/
 .list-six,.item-six {
 	display: block;
-	width: 1190px;
 	clear: both;	
-}
-.list-six {
-	height: 365px;
 }
 .item-six {
 	margin-top: 20px;
-	height: 265px;
 }
 /*通过hover时候z－index的改变来改变边框颜色切position：relative？*/
 .fou-list,.fou-item {
 	position: relative;
 	float: left;
-	width: 169px;
-	padding: 14px;
 	border: 1px solid #e8e8e8;
 	margin-left: -1px;
 	z-index: 1;
-}
-.fou-list {
-	height: 335px;
-}
-.fou-item {
-	height: 235px;	
 }
 .fou-list:hover,.fou-item:hover {
 	border: 1px solid #ff4400;
@@ -58,11 +221,10 @@
 
 .farm-pic {
 	width: 100%;
-	height: 203px;
 	margin-top: 8px;
 }
 .farm-big {
-	width: 100%;
+	float: left;
 	height: 98px;
 }
 .farm-small {
@@ -70,11 +232,9 @@
 	display: block;
 	width: 80px;
 	height: 91px;
-	margin-top: 14px;
 }
 .farm-big img {
 	display: block;
-	width: 169px;
 	height: 72px;
 }
 .farm-big span,.farm-small span {
@@ -86,7 +246,7 @@
 	text-align: center;
 }
 .farm-big span {
-	width: 169px;
+	width: 100%;
 	margin-top: 10px;
 }
 .farm-small span {
@@ -103,14 +263,13 @@
 }
 
 .go-abroad {
-	width: 100%;
 	height: 150px;
 	margin-top: 7px;
 	background-color: #f5f5f5;
 }
 .go-abroad img {
 	display: block;
-	width: 169px;
+	width: 100%;
 	height: 100px;
 }
 .go-abroad strong {
@@ -138,44 +297,42 @@
 }
 
 .go-other {
-	width: 100%;
 	height: 145px;
-	margin-top: 13px;
 }
 .other-one {
-	width: 178px;
 	height: 93px;
 }
 .other-one a {
 	float: left;
 	display: block;
-	width: 80px;
 	height: 93px;
-	margin-right: 9px;
 }
 .other-one img {
 	display: block;
-	width: 80px;
+	width: 100%;
 	height: 70px;
 }
 .other-one span {
 	display: block;
-	width: 80px;
+	width: 100%;
 	height: 16px;
 	line-height: 16px;
 	margin-top: 7px;
 	font-size: 12px;
 	color: #3c3c3c;
 	text-align: center;
+	white-space: nowrap;
 }
 .other-two,.other-thr {
-	width: 169px;
+	width: 100%;
 	height: 18px;
 	margin-top: 8px;
+	font-size: 0;
+	overflow: hidden;
+	/*white-space: nowrap;*/
 }
 .other-two a {
-	float: left;
-	display: block;
+	display: inline-block;
 	/*height: 18px;*/
 	line-height: 18px;
 	font-size: 12px;
@@ -183,6 +340,7 @@
 	border-right: 1px solid #e1e1e1;
 	margin-right: 2px;
 	color: #3c3c3c;
+	white-space: nowrap;
 }
 .other-thr span {
 	float: left;
@@ -191,6 +349,7 @@
 	margin-right: 3px;
 	line-height: 18px;
 	font-size: 12px;
+	white-space: nowrap;
 }
 .other-thr a {
 	float: left;
@@ -206,7 +365,7 @@
 }
 /*第二部分*/
 .guang-title {
-	width: 1190px;
+	width: 100%;
 	height: 26px;
 	margin-top: 15px;
 	margin-bottom: 10px;
@@ -236,7 +395,6 @@
 .guang-pic {
 	float: left;
 	overflow: hidden;
-	width: 802px;
 	height: 180px;
 	/*margin-top: 10px;*/
 }
@@ -244,12 +402,11 @@
 	position: relative;
 	float: left;
 	display: block;
-	width: 148px;
 	height: 180px;
 	margin-right: 12px;
 }
 .guang-pic img {
-	width: 148px;
+	width: 100%;
 	height: 180px;	
 }
 .guang-pic p {
@@ -264,15 +421,23 @@
 	text-align: center;
 	background-color: rgba(255,255,255,0.8);
 }
-.guang-pic li:hover p,.farm-pic a:hover span {
+.guang-pic li:hover p,
+.farm-pic a:hover span {
 	background-color: #ffffff;
 	color: #ff4400;
 }
-.go-abroad:hover img,.other-one a:hover img,.guang-pic li:hover img,.farm-pic a:hover img {
+.go-abroad:hover img,
+.other-one a:hover img,
+.guang-pic li:hover img,
+.farm-pic a:hover img {
 	opacity: 0.8;
 	transition: 0.3s;
 }
-.go-abroad:hover strong,.other-one a:hover span,.other-two a:hover,.other-thr a:hover,.sale-head a:hover {
+.go-abroad:hover strong,
+.other-one a:hover span,
+.other-two a:hover,
+.other-thr a:hover,
+.sale-head a:hover {
 	color: #ff4400;
 }
 .guang-right {
@@ -328,14 +493,14 @@
 }
 /*第四部分见上*/
 /*第五部分*/
-.hot-sale {
-	width: 1190px;
+/*.hot-sale {
 	height: 585px;
-	margin-top: 31px;
-}
+}*/
 .sale-head {
-	width: 100%;
 	height: 32px;
+	white-space: nowrap; 
+	overflow: hidden;
+	font-size: 0;
 }
 .head-first {
 	float: left;
@@ -347,11 +512,9 @@
 	color: #3c3c3c;
 	font-weight: bold;
 	margin-top: 2px;
-	margin-right: 18px;
 }
 .sale-head a {
-	float: left;
-	display: block;
+	display: inline-block;
 	height: 14px;
 	line-height: 14px;
 	border-right: 1px solid #e8e8e8;
@@ -363,22 +526,12 @@
 }
 /*sale-show的半响应式布局*/
 .sale-list {
-	width: 1190px;
 	height: 398px;
-}
-.sale-show {
-	width: 1190px;
 }
 .sale-list li {
 	float: left;
 	height: 100%;
 	margin-left: 1px;/*为子元素div的border流出空位*/
-}
-.vertical-one {
-	width: 19.6%; 
-}
-.vertical-two {
-	width: 13.5%;
 }
 /*区别以下两张布局见笔记*/
 .sale-list div,.sale-show li {
@@ -386,9 +539,11 @@
 	z-index: 1;
 	float: left;
 	display: block;
-	padding-top: 10px;
 	border: 1px solid #e8e8e8;
 	margin-top: -1px;/*为竖直有两个div重合border*/
+}
+.sale-list div {
+	padding-top: 10px;
 }
 .vertical-one div {
 	width: 100%;
@@ -398,10 +553,12 @@
 	width: 100%;
 	height: 188px; 
 }
+/*清浮动*/
+.sale-show {
+	overflow: hidden;
+}
 .sale-show li {
 	width: 31.5%;
-	padding: 10px;
-	padding-bottom: 14px;
 }
 /*理解为在与原来的z-index是相对上层的所以用relative*/
 .sale-show li:hover,.sale-list div:hover {
