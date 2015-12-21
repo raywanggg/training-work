@@ -28,12 +28,21 @@ ul {
 .head-nav:after {
 	clear: both;
 }
-/*通过最大最小的宽度设置使其不会挤压出界*/
+/*可以通过最大最小的宽度设置使其不会挤压出界*/
+/*！响应式布局一：导航*/
+@media screen and (min-width: 1190px) {
+	.nav-width {
+		width: 1190px;
+	}	
+}
+@media screen and (max-width: 1189px) {
+	.nav-width {
+		width: 990px;
+	}	
+}
 .nav-content {
-	max-width: 1190px;
-	min-width: 950px;
 	height: 35px;
-	margin: 0 auto;
+	margin: 0 auto;	
 }
 .nav-common {
 	float: left;	
@@ -260,32 +269,81 @@ a.head-hover:hover {
 .content-blue a:hover {
 	background-color: #52a0e5;
 }
+
 /*导航以下的部分*/
 .wholepage {
 	display: block;
-	width: 1190px;
 	margin: 0 auto;
 }
 .top {
 	display: block;
-	width: 100%;
 	height: 166px; /*130px+36px*/
 }
+/*！响应式布局二：搜索栏*/
+@media screen and (min-width: 1190px) {
+	.wholepage {
+		width: 1190px;
+	}	
+	.top {
+		width: 1190px;
+	}
+	.left-wrap {
+		width: 971px;
+	}
+	.right-wrap {
+		width: 219px;
+	}
+	.search {
+		width: 721px;
+	}
+	.panel-width {
+		width: 621px;
+	}
+	.search-list {
+		width: 679px;
+	}
+	.highsearch {
+		display: block;
+	}
+}
+@media screen and (max-width: 1189px) {
+	.wholepage {
+		width: 990px;
+	}
+	.top {
+		width: 990px;
+	}
+	.left-wrap {
+		width: 841px;
+	}	
+	.right-wrap {
+		width: 149px;
+	}
+	.search {
+		width: 591px;
+	}
+	.panel-width {
+		width: 491px;
+	}
+	.search-list {
+		width: 549px;
+	}
+	.highsearch {
+		display: none;
+	}
+}
+
 .left-wrap,.right-wrap {
 	float: left;
 	display: block;
 	height: 90px;	
 }
 .left-wrap {
-	/*mark1*/
-	width: 971px;
-	/*min-width: 840px;*/
 	margin-bottom: 8px;
 	margin-top: 68px; /*32px+36px*/
 }
 .right-wrap {
 	position: relative;
-	width: 219px;
 	height: 114px;
 	margin-top: 48px; /*12px+36px*/
 }
@@ -309,9 +367,6 @@ a.head-hover:hover {
 }
 .search {
 	float: left;
-	/*mark2*/
-	width: 721px;
-	/*min-width: 590px;*/
 	height: 100%;
 }
 .search-label {
@@ -364,8 +419,6 @@ a.head-hover:hover {
 .search-panel {
 	position: absolute;
 	left: 0;
-	width: 621px;
-	/*min-width: 490px;*/
 	/*height: 100%;padding不算高度所以height为100%会溢出*/
 	padding: 3px 0 3px 3px;
 	background-color: #ff5500;
@@ -373,14 +426,13 @@ a.head-hover:hover {
 }
 .panel {
 	position: relative;
-	width: 618px;
 	height: 34px;
 	background-color: #fff; 	
 }
 .pic-image {
 	position: absolute;
-	left: 591.3px;
-	top: 8.3px;
+	right: 9.5px;
+	top: 8.5px;
 	width: 20px;
 	height: 20px;
 	background-image: url("img/pic-take.png");
@@ -453,7 +505,7 @@ input.search-content {
 	padding-top: 5px;
 	padding-bottom: 2px;
 	height: 18px;
-	width: 679px;
+	overflow: hidden;
 }
 .search-list a {
 	float: left;
@@ -583,19 +635,6 @@ img.close {
 	margin-top: 4.5px;
 	margin-bottom: 4.5px;*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
