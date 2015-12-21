@@ -1,516 +1,679 @@
+/*！响应式布局三：body－one的右侧*/
+
+@media screen and (min-width: 1190px) {
+    .body-right {
+        width: 990px;
+    }
+    .left-label {
+        margin: 0 9px;
+    }
+    .right-label {
+        margin-left: 12px;
+    }
+    .pic-change {
+        width: 520px;
+    }
+    .pic-fix {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1189px) {
+    .body-right {
+        width: 790px;
+    }
+    .left-label {
+        margin: 0 5px;
+    }
+    .right-label {
+        margin-left: 4.2px;
+    }
+    .pic-change {
+        width: 490px;
+    }
+    .pic-fix {
+        display: none;
+    }
+}
+
 .body-right {
-	float: right;
-	width: 990px;
-	margin-top: 3px;
+    float: right;
+    margin-top: 3px;
 }
+
 .right-up {
-	width: 100%;
-	height: 28px;
-	border-bottom: 2px solid #ff4400;
-	padding-top: 3px;
-	padding-bottom: 2px; 
+    width: 100%;
+    height: 28px;
+    border-bottom: 2px solid #ff4400;
+    padding-top: 3px;
+    padding-bottom: 2px;
 }
+
 .right-down {
-	width: 100%;
-	height: 485px;
-	margin-top: 7px;
+    width: 100%;
+    height: 485px;
+    margin-top: 7px;
 }
+
+
 /*分隔符两侧的样式*/
-.left-label,.right-label {
-	float: left;
-	height: 28px;
-	line-height: 28px;
-	font-weight: 700;
-	text-align: center;
-	/*text-align: -webkit-match-parent;*/
-}
-.left-label {
-	margin: 0 9px;
-	font-size: 16px;
-	color: #ff4400;
-}
+
+.left-label,
 .right-label {
-	margin-left: 12px;
-	font-size: 14px;
-	color: #3c3c3c;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    text-align: center;
+    /*text-align: -webkit-match-parent;*/
 }
+
+.left-label {
+    font-size: 16px;
+    color: #ff4400;
+}
+
+.right-label {
+    font-size: 14px;
+    color: #3c3c3c;
+}
+
 .right-up li:hover {
-	cursor: pointer;
-	background-color: #f4f4f4;
+    cursor: pointer;
+    background-color: #f4f4f4;
 }
+
 .right-label:hover {
-	color: #ff4400;
+    color: #ff4400;
 }
+
 .left-two {
-	width: 42px;
+    width: 42px;
 }
+
 .left-thr {
-	width: 58px;
+    width: 58px;
 }
+
 .up-part {
-	float: left;
-	margin: 0 1.5px 0 8px;
-	padding-top: 7px;
+    float: left;
+    margin: 0 1.5px 0 8px;
+    padding-top: 7px;
 }
+
 img.division {
-	display: block;
-	width: 1.5px;
-	height: 14px;
+    display: block;
+    width: 1.5px;
+    height: 14px;
 }
+
 .right-fou {
-	width: 66px;
+    width: 66px;
 }
+
 .right-thr {
-	width: 52px;
+    width: 52px;
 }
+
 .right-two {
-	width: 38px;
+    width: 38px;
 }
 
 .pic-change {
-	float: left;
-	width: 520px;
-	height: 483px;
-}
-.pic-fix {
-	float: left;
-	margin-left: 3px;
-	width: 167px;
-	height: 483px;
-}
-.pic-extra {
-	float: left;
-	margin-left: 10px;
-	width: 290px;
-	height: 485px;
-}
-/*图片轮换部分*/
-.one-container {
-	position: relative;
-	overflow: hidden;
-}
-.one-container,.one-fix  {
-	width: 100%;
-	height: 280px;
-	overflow: hidden;
-}
-.two-container,.two-fix {
-	margin-top: 3px;
-	width: 100%;
-	height: 200px;
+    float: left;
+    height: 483px;
 }
 
-#pic-list {
-	position: absolute; /*基于父容器container的定位*/
-	/*left: -520px;*/
-	width: 3640px; /*7张图片的总宽度*/
-	height: 280px;
-	z-index: 1; /*最底层*/
+.pic-fix {
+    float: left;
+    margin-left: 3px;
+    width: 167px;
+    height: 483px;
 }
-#pic-list img {
-	float: left;
+
+.pic-extra {
+    float: left;
+    margin-left: 10px;
+    width: 290px;
+    height: 485px;
 }
-.pic-button {
-	position: absolute;
-	bottom: 15px;
-	left: 50%;
-	margin-left: -33px;
-	height: 13px;
-	border-radius: 10px;
-	background: rgba(255,255,255,0.3);
-	text-align: center;
-	z-index: 2; /*在图片上面*/
+
+
+/*图片轮换部分*/
+
+.one-container {
+    position: relative;
 }
-.pic-button span {
-	float: left;
+
+.one-container,
+.one-fix {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.two-container,
+.two-fix {
+    margin-top: 3px;
+    width: 100%;
+    height: 200px;
+}
+.two-container img {
 	display: block;
-	width: 9px;
-	height: 9px;
-	/*padding-top: 9px;*/  /*padding-top与height一样的作用？*/
-	margin: 2px;
-	border-radius: 50%;
-	background-color: #b7b7b7;
+	width: 100%;
+	height: 100%;
 }
+#pic-list {
+    position: absolute;
+    /*基于父容器container的定位*/
+    /*left: -520px;*/
+    width: 3640px;
+    /*7张图片的总宽度*/
+    height: 280px;
+    z-index: 1;
+    /*最底层*/
+}
+
+#pic-list img {
+    float: left;
+}
+
+.pic-button {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -33px;
+    height: 13px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    z-index: 2;
+    /*在图片上面*/
+}
+
+.pic-button span {
+    float: left;
+    display: block;
+    width: 9px;
+    height: 9px;
+    /*padding-top: 9px;*/
+    /*padding-top与height一样的作用？*/
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #b7b7b7;
+}
+
 .pic-button .on {
-	background-color: #ff4400;
+    background-color: #ff4400;
 }
+
 .pic-arrow {
-	position: absolute;
+    position: absolute;
     top: 120px;
-    width: 40px; 
-    height: 40px; 
+    width: 40px;
+    height: 40px;
     line-height: 40px;
-    font-size: 28px; 
-    font-weight: bold;   
-    text-align: center; 
-    cursor: pointer;       
-    background-color: rgba(0,0,0,.3); 
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .3);
     color: #fff;
     z-index: 2;
-    display: none;    /*左右切换按钮默认先隐藏*/
-    -webkit-transform:rotate(90deg);  /*旋转显示字符*/
+    display: none;
+    /*左右切换按钮默认先隐藏*/
+    -webkit-transform: rotate(90deg);
+    /*旋转显示字符*/
 }
+
 .pic-arrow:hover {
-	background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
 }
+
 .one-container:hover .pic-arrow {
-	display: block;
+    display: block;
 }
-#prev { 
+
+#prev {
     left: 5px;
 }
-#next { 
+
+#next {
     right: 5px;
 }
+
+
 /*对应pic-extra每个部分外框*/
+
 .one-part {
-	width: 288px;
-	height: 98px; 
-	border: 1px solid #eeeeee;
+    width: 288px;
+    height: 98px;
+    border: 1px solid #eeeeee;
 }
+
 .two-part {
-	width: 288px;
-	height: 120px;
-	border-bottom: 1px solid #eeeeee;
-	border-left: 1px solid #eeeeee;
-	border-right: 1px solid #eeeeee;
+    width: 288px;
+    height: 120px;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
 }
+
 .thr-part {
-	width: 288px;
-	height: 44px;
-	border-bottom: 1px solid #eeeeee;
-	border-left: 1px solid #eeeeee;
-	border-right: 1px solid #eeeeee;
+    width: 288px;
+    height: 44px;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
 }
+
 .fou-part {
-	width: 290px;
-	height: 219px;
-	position: relative;
+    width: 290px;
+    height: 219px;
+    position: relative;
 }
+
 .fou-part ul {
-	height: 219px;
-	overflow: hidden;
+    height: 219px;
+    overflow: hidden;
 }
+
+
 /*第一部分的标题和内容*/
+
 .part-label {
-	width: 100%;
-	height: 27px;
+    width: 100%;
+    height: 27px;
 }
+
 .part-content {
-	width: 268px;
-	height: 50px;
-	padding: 10px 10px 11px 10px;	
+    width: 268px;
+    height: 50px;
+    padding: 10px 10px 11px 10px;
 }
+
 .part-label ul {
-	overflow: hidden;
-	margin-left: -1px;
-	margin-right: -1px;
+    overflow: hidden;
+    margin-left: -1px;
+    margin-right: -1px;
 }
+
 .part-label li {
-	float: left;
-	width: 56px;
-	height: 26px;
-	border-left: 1px solid #f7f7f7;
-	border-right: 1px solid #f7f7f7;
-	border-bottom: 1px solid #eeeeee;
-	font-size: 12px;
-	line-height: 26px;
-	text-align: center;
-	background-color: #f7f7f7;
+    float: left;
+    width: 56px;
+    height: 26px;
+    border-left: 1px solid #f7f7f7;
+    border-right: 1px solid #f7f7f7;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+    background-color: #f7f7f7;
 }
+
+
 /*第一个和最后一个左右两侧有区别*/
+
 .label-head {
-	border-left: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
 }
+
 .label-tail {
-	border-right: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
 }
+
+
 /*hover的效果，优先级与.part-label li相同，靠后优先显示*/
+
 li.label-select {
-	border-left: 1px solid #eeeeee;
-	border-right: 1px solid #eeeeee;
-	border-bottom: none;
-	background-color: #ffffff;
-	font-weight: 700;	
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: none;
+    background-color: #ffffff;
+    font-weight: 700;
 }
+
 .part-label a {
-	color: #3c3c3c;
+    color: #3c3c3c;
 }
+
 .part-label a:hover {
-	color: #ff4400;
+    color: #ff4400;
 }
+
 .part-content li {
-	float: left;
-	display: block;
-	height: 25px;
-	line-height: 25px;
-	font-size: 12px;
-	overflow: hidden;
+    float: left;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    overflow: hidden;
 }
+
 .part-content li a {
-	color: #3c3c3c;
+    color: #3c3c3c;
 }
+
 .part-content li a:hover {
-	color: #ff4400;
+    color: #ff4400;
 }
+
+
 /*特殊颜色要求 添加important才显示*/
+
 .content-color a {
-	color: #ff4400 !important;
+    color: #ff4400 !important;
 }
+
+
 /*短句长度要求*/
+
 .content-length {
-	width: 130px;
+    width: 130px;
 }
+
+
 /*公益对应的content*/
+
 .bene-both {
-	float: left;
-	display: block;
-	width: 130px;
-	height: 50px;
+    float: left;
+    display: block;
+    width: 130px;
+    height: 50px;
 }
-.bene-shop,.bene-baby {
-	float: left;
-	display: block;
-	width: 50px;
-	height: 50px;
-}
-.bene-shop {
-	margin-left: 5px;
-}
+
+.bene-shop,
 .bene-baby {
-	margin-left: 13px;
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
 }
+
+.bene-shop {
+    margin-left: 5px;
+}
+
+.bene-baby {
+    margin-left: 13px;
+}
+
+
 /*第二部分的标题和内容*/
-.login-image,.login-text {
-	float: left;
-	height: 80px;
+
+.login-image,
+.login-text {
+    float: left;
+    height: 80px;
 }
+
 .login-gif {
-	display: block;
-	width: 60px;
-	height: 60px;
-	margin: 11px 10px 9px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 11px 10px 9px;
 }
+
 .login-logo {
-	float: left;
-	display: block;	
-	width: 60px;
-	height: 60px;
-	margin: 11px 10px 9px;
-	background-image: url("img/TB.png");
-	background-size: 229px 193px;	
-	background-repeat: no-repeat;
-	background-position: 0 -133px;	
+    float: left;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 11px 10px 9px;
+    background-image: url("img/TB.png");
+    background-size: 229px 193px;
+    background-repeat: no-repeat;
+    background-position: 0 -133px;
 }
+
 .text-up {
-	display: block;
-	height: 14px;
-	line-height: 14px;
-	font-size: 12px;
-	margin-top: 22px;	
+    display: block;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    margin-top: 22px;
 }
+
 .text-up a {
-	color: #3c3c3c;
+    color: #3c3c3c;
 }
+
 .text-up a:hover {
-	color: #ff4400;
+    color: #ff4400;
 }
+
 .text-down {
-	position: relative;
-	display: block;
-	height: 20px;
-	line-height: 20px;
-	font-size: 12px;
-	margin-top: 8px;
-	text-indent: 20px; 
+    position: relative;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-top: 8px;
+    text-indent: 20px;
 }
+
 .text-down a {
-	color: #ff4400;
+    color: #ff4400;
 }
+
 .text-down span {
-	font-size: 12px;
+    font-size: 12px;
 }
+
 .gold-logo {
-	position: absolute;
-	display: block;
-	top: 3px;
-	left: 0;
-	width: 16px;
-	height: 16px;
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 0;
+    width: 16px;
+    height: 16px;
 }
+
 .login-button {
-	margin-left: 10px;
-	margin-top: 0;
+    margin-left: 10px;
+    margin-top: 0;
 }
+
 .login-button a {
-	float: left;
-	display: block;
-	height: 25px;
-	line-height: 25px;
-	margin-left: 7px;
-	font-size: 12px;
-	font-weight: bold;
-	color: #ffffff;
-	background-color: #ff4400;
-
+    float: left;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff4400;
 }
+
 .login-button a:hover {
-	background-color: #f22d00;
-}
-.button-long {
-	width: 92px;
-	text-indent: 43.5px;
-	background-image: url("img/login.png");
-	background-size: 13.5px 13px;
-	background-repeat: no-repeat;
-	background-position: 24.5px 5px; 
-}
-.button-short {
-	width: 75px;
-	text-align: center;
-}
-/*第三部分的标题和内容*/
-.front-logo {
-	float: left;
-	display: block;	
-	width: 55px;
-	height: 16px;
-	margin: 16px 15px 12px 14px;
-	background-image: url("img/TB.png");
-	background-size: 229px 193px;	
-	background-repeat: no-repeat;
-	background-position: -146px -103px;
-}
-.back-text {
-	position: relative;
-	float: left;
-	display: block;
-	margin-top: 10px;
-	width: 200px;
-	height: 24px;
-	overflow: hidden;
-}
-.back-wrap {
-	position: absolute;
-	height: 72px;
-	top: 0;
-	transition-duration: 0.5s;
-	transform: translate3d(0px,0px,0px);	
-}
-/*.back-wrap {
-	position: absolute;
-	height: 72px;
-	top: 0;
-	transition-duration: 0.5s;
-	transform: translate3d(0px,-24px,0px);
-}
-.back-wrap {
-	position: absolute;
-	height: 72px;
-	top: 0;
-	transition-duration: 0.5s;
-	transform: translate3d(0px,-48px,0px);
-}*/
-.back-wrap div {
-	display: block;
-	height: 24px;
-	line-height: 24px;
-	font-size: 12px;
-}
-.back-wrap a {
-	color: #3c3c3c;	
-}
-.back-wrap a:hover {
-	color: #ff4400;
-}
-.back-wrap span {
-	color: #ff4400;
-}
-/*第四部分的标题和内容*/
-.fou-part li {
-	float: left;
-	position: relative;
-	display: block;
-	width: 57px;
-	height: 72px;
-	margin-left: -1px;
-	border-left: 1px solid transparent;
-	border-right: 1px solid #eeeeee;
-	border-bottom: 1px solid #eeeeee;
-}
-/*animation不起作用？*/
-.fou-part li:hover img {
-	-webkit-animation: toTopFromBottom 0.3s forwards;
-}
-.row-one:hover {
-	z-index: 9001;
-	border-top: 1px solid #ff4400;
-	border-left: 1px solid #ff4400;
-	border-right: 1px solid #ff4400;
-	border-bottom: 1px solid #ffffff;
-}
-li.border-left {
-	margin-left: 0;
-	border-left: 1px solid #eeeeee;
-}
-li.part-charge {
-	width: 114px;
-	height: 145px;
-}
-li.part-short {
-	width: 56px;
-}
-/*？图片对齐的问题*/
-.fou-part li a {
-	display: block;
-}
-.fou-part li a:hover span {
-	color: #ff4400;
-}
-.fou-part li a img {
-	display: block;
-	margin-top: 12px;
-}
-.img-big {
-	padding: 16px 27px 14px;
-	width: 60px;
-	height: 60px;	
-}
-.img-big-hover {
-	padding: 6px 45px 5px;
-	width: 24px;
-	height: 25px;
-}
-.img-small {
-	padding: 6px 16px 5px;
-	width: 24px;
-	height: 25px;
-}
-/*文字不移动*/
-.fou-part li a span {
-	display: block;
-	height: 18px;
-	line-height: 18px;
-	font-size: 12px;
-	text-align: center;
-	color: #6c6c6c;
-}
-.text-big {
-	margin: 0 0 25px;
-	width: 114px;
-}
-.text-small {
-	margin: 0 0 6px;
-	width: 57px;
-}
-.extra-box {
-	display: none;
-	position: absolute;
-	top: 73px;
-	width: 288px;
-	height: 150px;
-	border: 1px solid #ff4400;
-	background-color: #ffffff;
-	z-index: 9000;
+    background-color: #f22d00;
 }
 
+.button-long {
+    width: 92px;
+    text-indent: 43.5px;
+    background-image: url("img/login.png");
+    background-size: 13.5px 13px;
+    background-repeat: no-repeat;
+    background-position: 24.5px 5px;
+}
+
+.button-short {
+    width: 75px;
+    text-align: center;
+}
+
+
+/*第三部分的标题和内容*/
+
+.front-logo {
+    float: left;
+    display: block;
+    width: 55px;
+    height: 16px;
+    margin: 16px 15px 12px 14px;
+    background-image: url("img/TB.png");
+    background-size: 229px 193px;
+    background-repeat: no-repeat;
+    background-position: -146px -103px;
+}
+
+.back-text {
+    position: relative;
+    float: left;
+    display: block;
+    margin-top: 10px;
+    width: 200px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.back-wrap {
+    position: absolute;
+    height: 72px;
+    /*top: 0;	*/
+    transition-duration: 0.5s;
+}
+
+.wrap-change {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.wrap-two {
+    transform: translate3d(0px, -24px, 0px);
+}
+
+.wrap-thr {
+    transform: translate3d(0px, -48px, 0px);
+}
+
+.back-wrap div {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.back-wrap a {
+    color: #3c3c3c;
+}
+
+.back-wrap a:hover {
+    color: #ff4400;
+}
+
+.back-wrap span {
+    color: #ff4400;
+}
+
+
+/*第四部分的标题和内容*/
+
+.fou-part li {
+    float: left;
+    position: relative;
+    display: block;
+    width: 57px;
+    height: 72px;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/*animation不起作用？*/
+
+.fou-part li:hover img {
+    -webkit-animation: toTopFromBottom 0.3s forwards;
+}
+
+.row-one:hover {
+    z-index: 9001;
+    border-top: 1px solid #ff4400;
+    border-left: 1px solid #ff4400;
+    border-right: 1px solid #ff4400;
+    border-bottom: 1px solid #ffffff;
+}
+
+li.border-left {
+    margin-left: 0;
+    border-left: 1px solid #eeeeee;
+}
+
+li.part-charge {
+    width: 114px;
+    height: 145px;
+}
+
+li.part-short {
+    width: 56px;
+}
+
+
+/*？图片对齐的问题*/
+
+.fou-part li a {
+    display: block;
+}
+
+.fou-part li a:hover span {
+    color: #ff4400;
+}
+
+.fou-part li a img {
+    display: block;
+    margin-top: 12px;
+}
+
+.img-big {
+    padding: 16px 27px 14px;
+    width: 60px;
+    height: 60px;
+}
+
+.img-big-hover {
+    padding: 6px 45px 5px;
+    width: 24px;
+    height: 25px;
+}
+
+.img-small {
+    padding: 6px 16px 5px;
+    width: 24px;
+    height: 25px;
+}
+
+
+/*文字不移动*/
+
+.fou-part li a span {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #6c6c6c;
+}
+
+.text-big {
+    margin: 0 0 25px;
+    width: 114px;
+}
+
+.text-small {
+    margin: 0 0 6px;
+    width: 57px;
+}
+
+.extra-box {
+    display: none;
+    position: absolute;
+    top: 73px;
+    width: 288px;
+    height: 150px;
+    border: 1px solid #ff4400;
+    background-color: #ffffff;
+    z-index: 9000;
+}
