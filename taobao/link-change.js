@@ -50,7 +50,7 @@ extraShow(part_game,extra_two);
 extraShow(part_travel,extra_thr);
 extraShow(part_secu,extra_fou);
 
-// 为什么标签对click之后的hover事件不起作用
+//不修改类名则标签对click之后的hover事件不起作用
 var isTotop = true;
 var updown_wrap = $(".updown-wrap");
 var sign_common = $(".sign-common");
@@ -197,7 +197,6 @@ change_image.hover(function() {
 		left:'0'
 	},"fast");
 })
-
 //快来扫我的动画
 // var scan_show = $(".scan-show");
 // var scan_hide = $(".scan-hide");
@@ -207,7 +206,23 @@ change_image.hover(function() {
 // 	scan_hide.css("top","20px").css("display","none");
 // })
 
+// function picroll() {
+// 	if ($(".back-wrap").hasClass("wrap-change")) {
+// 		$(".back-wrap").addClass("wrap-two").removeClass("wrap-change");
+// 		setTimeout(picroll, 2000);
+// 	}
 
+// 	if ($(".back-wrap").hasClass("wrap-two")) {
+// 		$(".back-wrap").addClass("wrap-thr").removeClass("wrap-two");
+// 		setTimeout(picroll, 2000);
+// 	}
+// 	if ($(".back-wrap").hasClass("wrap-thr")) {
+// 		$(".back-wrap").addClass("wrap-change").removeClass("wrap-thr");
+// 		setTimeout(picroll, 2000);
+// 	}
+	
+// }
+// picroll();
 
 
 
