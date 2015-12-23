@@ -32,23 +32,38 @@ var part_charge = $(".part-charge");
 var part_game = $(".part-game");
 var part_travel = $(".part-travel");
 var part_secu = $(".part-secu");
+var extra_box = $(".extra-box");
 var extra_one = $(".extra-one");
 var extra_two = $(".extra-two");
 var extra_thr = $(".extra-thr");
 var extra_fou = $(".extra-fou");
+var row_one = $(".row-one");
+var close_logo = $(".close-logo");
+//给第一排hover添加边框效果&辅框内容
 function extraShow(x,y) {
 	x.hover(function() {
 		part_charge.css("height","72px").find("img").attr("src","img/phone.png").removeClass("img-big").addClass("img-big-hover");
 		isBlock(y);
+		isNone(y.siblings());//显示辅框以及兄弟框消失
+		x.addClass("row-one-hover");
+		if (x.siblings().has("row-one-hover")) {
+			x.siblings().removeClass("row-one-hover");
+		}
 	},function() {
-		part_charge.css("height","145px").find("img").attr("src","img/phone-60.png").removeClass("img-big-hover").addClass("img-big");
-		isNone(y);
+
 	})
 }
 extraShow(part_charge,extra_one);
 extraShow(part_game,extra_two);
 extraShow(part_travel,extra_thr);
 extraShow(part_secu,extra_fou);
+//关闭辅框
+close_logo.click(function() {
+	isNone(extra_box);
+	part_charge.css("height","145px").find("img").attr("src","img/phone-60.png").removeClass("img-big-hover").addClass("img-big");
+	row_one.removeClass("row-one-hover");
+})
+
 
 //不修改类名则标签对click之后的hover事件不起作用
 var isTotop = true;
@@ -224,7 +239,26 @@ change_image.hover(function() {
 // }
 // picroll();
 
-
-
-
+//返回顶部
+function distanceJudge() {
+    var showDistance = 730;//距离顶端多少距离开始显示go-top
+    var thisTop = $(window).scrollTop();//初次加载页面的判断
+    if($(window).scrollTop() < showDistance){
+        $(".top-return").css("display","none");
+    }
+    //滑动过程中的距离判断
+    $(window).scroll(function() {
+        thisTop = $(this).scrollTop();
+        if($(this).scrollTop() < showDistance) {
+            $(".top-return").css("display","none");
+        }
+        else {
+            $(".top-return").css("display","block");
+        }
+    });
+}
+distanceJudge();
+$(".top-return").click(function() {
+	$("body").animate({scrollTop:0},"fast");//Webkit，ie把body改为html
+})
 
