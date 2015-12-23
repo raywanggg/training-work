@@ -277,7 +277,7 @@ a.head-hover:hover {
 }
 .top {
 	display: block;
-	height: 166px; /*130px+36px*/
+	height: 165px; 
 }
 /*！响应式布局二：搜索栏*/
 @media screen and (min-width: 1190px) {
@@ -340,12 +340,12 @@ a.head-hover:hover {
 }
 .left-wrap {
 	margin-bottom: 8px;
-	margin-top: 68px; /*32px+36px*/
+	margin-top: 67px; /*32px+36px*/
 }
 .right-wrap {
 	position: relative;
 	height: 114px;
-	margin-top: 48px; /*12px+36px*/
+	margin-top: 47px; /*12px+36px*/
 }
 .logo {
 	float: left;
