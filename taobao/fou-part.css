@@ -1,18 +1,16 @@
 /*第四部分的标题和内容*/
-.fou-part li {
+.extra-choice li {
     float: left;
     position: relative;
     display: block;
     width: 57px;
     height: 72px;
     margin-left: -1px;
-    border-left: 1px solid transparent;
+    border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
-}
-/*animation不起作用？*/
-.fou-part li:hover img {
-    -webkit-animation: toTopFromBottom 0.3s forwards;
+    background-color: #ffffff;
+    overflow: hidden;
 }
 li.border-left {
     margin-left: 0;
@@ -26,7 +24,7 @@ li.part-short {
     width: 56px;
 }
 li.row-one-hover {
-    z-index: 9001;
+    z-index: 8001;
     border-top: 1px solid #ff4400;
     border-left: 1px solid #ff4400;
     /*和border－left有矛盾就要放在后面*/
@@ -37,13 +35,15 @@ li.row-one-hover {
     color: #ff4400 !important;
 }
 /*？图片对齐的问题*/
-.fou-part li a {
+.extra-choice a {
     display: block;
+    /*height: 54px;*/
 }
-.fou-part li a:hover span {
+.extra-choice a:hover span {
     color: #ff4400;
 }
-.fou-part li a img {
+.extra-choice a img {
+    position: relative;
     display: block;
     margin-top: 12px;
 }
@@ -63,7 +63,7 @@ li.row-one-hover {
     height: 25px;
 }
 /*文字不移动*/
-.fou-part li span {
+.extra-choice li span {
     display: block;
     height: 18px;
     line-height: 18px;
@@ -87,7 +87,7 @@ li.row-one-hover {
     height: 150px;
     border: 1px solid #ff4400;
     background-color: #ffffff;
-    z-index: 9000;
+   /* z-index: 8000;*/
 }
 .close-logo {
     position: absolute;
@@ -109,25 +109,39 @@ li.row-one-hover {
     margin-top: 5px;
     margin-left: 16px;
 }
-.extra-title a {
-    padding: 3px 9px;
+.charge-title {
+    padding: 2px 8px;
     font-size: 12px;
     line-height: 25px;
     color: #666666;
+    border: 1px solid transparent;
+}
+a.branch-select {
+    color: #ff4400;
+}
+
+.box-wrap {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 288px;
+    height: 200px;
+    overflow: hidden;
 }
 .extra-content {
     position: absolute;
     left: 15px;
-    top: 30px;
-    width: 1200px;
+    top: 0;
+    width: 1156px;
     height: 117px;
 }
 .extra-branch {
     float: left;
     padding-top: 4px;
-    width: 300px;
+    width: 289px;
     height: 113px;
 }
+/*话费*/
 .line-num,.line-money {
     position: relative;
     z-index: 1;
@@ -138,38 +152,283 @@ li.row-one-hover {
 .line-money {
     margin-top: -1px;
 }
-.line-num:hover,.line-money:hover {
+/*流量*/
+.line-wrap{
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 25px;
+    clear: both;
+}
+.line-flow,.flow-choice {
+    position: relative;
+    float: left;
+    height: 24px;
+    border: 1px solid #cccccc;
+    margin-top: -1px;
+}
+.line-flow {
+    width: 94px;
+}
+.flow-choice {
+    width: 93px;
+    margin-left: -1px;
+}
+.line-puzzle {
+    position: absolute;
+    display: block;
+    left: 100%;
+    top: 3px;
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+    cursor: help;
+}
+/*固话*/
+.form-item,
+.line-area,
+.gu-money {
+    display: block;
+    height: 25px;
+    width: 198px;
+}
+.form-item {
+    font-size: 12px;
+    color: #333333;
+    line-height: 25px;
+}
+.line-area,
+.gu-money {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #cccccc;
+}
+.gu-money,.area-fou {
+    margin-top: -1px;
+}
+
+.line-num:hover,
+.line-money:hover,
+.line-flow:hover,
+.flow-choice:hover,
+.line-area:hover,
+.gu-money:hover {
     z-index: 10;
     border-color: #9c9c9c;
 }
-.line-sale {
-    height: 17px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-.line-charge {
-    height: 27px;
-}
 /*框内内容*/
-.phonenum-input {
+.charge-input {
     border: none;
     outline: 0;
     text-indent: 2px;
     width: 165px;
     height: 18px;
     padding: 3px 20px 3px 3px;
+    font-size: 12px;
+    color: #333333;
 }
-.phonenum-input::-webkit-input-placeholder {
+/*流量框*/
+.wrap-input-one {
+    width: 71px; 
+}
+.wrap-input-two {
+    width: 70px;
+}
+.num-in::-webkit-input-placeholder,
+.area-one::-webkit-input-placeholder {
     /*line-height多大起作用*/
     line-height: 14px;
-    font-size: 12px;
     color: #9c9c9c;
 }
-.line-num img,.line-money img {
+.area-thr {
+    color: #9c9c9c;
+}
+/*固话框*/
+.gu-area {
+    width: 175px;
+    height: 19px;
+    text-indent: 7px;
+    line-height: 18px;
+}
+
+.line-num img,
+.line-money img,
+.line-flow img,
+.flow-choice img,
+.line-area img,
+.gu-money img {
     position: absolute;
     top: 3px;
     right: 4px;
     width: 16px;
     height: 18px;
 }
+/*立即充值*/
+.line-charge {
+    height: 27px;
+}
+.charge-two {
+    float: left;
+    margin-top: 5px;
+}
+.line-charge a {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #ff4200;
+    border-radius: 2px;
+}
+.charge-one a {
+    width: 48px;
+    height: 21px;
+    line-height: 21px;
+    padding: 3px 10px;
+}
+.charge-two a {
+    width: 68px;
+    height: 27px;
+    line-height: 27px;
+    padding: 0;
+}
+.line-charge a:hover {
+    background-color: #f22d00;
+}
+/*售价*/
+.line-sale {
+    display: block;
+    height: 17px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.sale-thin {
+    float: left;
+    display: block;
+    margin-top: 5px;
+    margin-left: 49px;
+    height: 27px;
+    line-height: 27px;
+}
+.line-sale span {
+    float: left;
+    display: block;
+    width: 43px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+}
+.line-sale strong {
+    float: left;
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    margin-left: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: verdana,arial;
+    color: #ff6600;      
+}
+.sale-thin span {
+    float: left;
+    display: block;
+    line-height: 27px;
+
+    font-size: 12px;
+    font-family: 'Microsoft Yahei';
+}
+.thin-one {
+    color: #666666;  
+}
+.thin-two {
+    margin-left: 3px;
+    color: #ff5000; 
+}
+.money-choice {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 100%;
+    margin-top: -1px;
+    left: -1px;
+    right: -1px;
+    width: 190px;
+    height: 136px;
+    border: 1px solid #959595;
+    background-color: #ffffff;
+    z-index: 9900;
+}
+.money-choice li {
+    float: left;
+    display: block;
+    cursor: pointer;
+    width: 93px;
+    height: 26px;
+    border-right: none;
+    font-size: 12px;
+    line-height: 26px;
+    color: #333333;
+    text-indent: 7px;
+    z-index: 10;
+}
+li.border-one {
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+li.border-two {
+    border-bottom: 1px solid #dcdcdc;
+}
+li.border-thr {
+    border-right: 1px solid #dcdcdc;
+}
+
+li.money-select,.line-money li:hover {
+    background-color: #ffece5;
+    color: #fc461e;
+}
+li.blank-choice:hover {
+    cursor: auto;
+    background-color: white;  
+}
+
+/*.extra-choice li:hover img {
+    -webkit-animation: toTopFromBottom 0.3s forwards;
+}*/
+/*a:hover不起作用*/
+.extra-choice li :hover img {
+    -webkit-animation: toTopFromBottom 0.2s ease-in-out;
+}
+
+@keyframes toTopFromBottom {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: 0;
+    }
+}
+.border-blink {
+    -webkit-animation: toWhiteFromBlue 0.3s ease-in-out;
+}
+/*添加阴影*/
+@keyframes toWhiteFromBlue {
+    0% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    50% {
+        border-color: #87CEFA;
+        box-shadow: 0px 0px 20px #00BFFF;
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
 

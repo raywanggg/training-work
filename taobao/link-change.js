@@ -64,6 +64,72 @@ close_logo.click(function() {
 	row_one.removeClass("row-one-hover");
 })
 
+//标签切换
+var charge_title = $(".charge-title");
+var frontone = $(".huafei");
+charge_title.hover(function() {
+	//移动辅框
+	if ($(this).hasClass("huafei")) {
+		$(".extra-content").animate({
+			left:'15px'
+		},"fast");
+	}
+	if ($(this).hasClass("liuliang")) {
+		$(".extra-content").animate({
+			left:'-274px'
+		},"fast");
+	}
+	if ($(this).hasClass("guhua")) {
+		$(".extra-content").animate({
+			left:'-563px'
+		},"fast");
+	}
+	if ($(this).hasClass("kuandai")) {
+		$(".extra-content").animate({
+			left:'-852px'
+		},"fast");
+	}
+	//上一个hover的图标闪动
+	$(this).addClass("branch-select");
+	//bug在于再次hover相同的标签if仍会起作用
+	if (frontone != $(this)) {
+		frontone.addClass("border-blink").removeClass("branch-select");
+	}
+},function() {
+	frontone.removeClass("border-blink");
+	frontone = $(this);
+})
+// 价位选择
+var line_money = $(".line-money");
+var line_sale = $(".line-sale");
+var money_choice = $(".money-choice");
+var isDisplay = false;
+line_money.click(function() {
+	if(isDisplay == false) {
+		isBlock(money_choice);
+		isDisplay = true;
+		return;
+	}
+	if(isDisplay == true) {
+		isNone(money_choice);
+		isDisplay = false;
+		return;
+	}
+})
+money_choice.find("li").not(".blank-choice").click(function() {
+	$(this).siblings().removeClass("money-select");
+	$(this).addClass("money-select");
+	line_money.find("input")[0].value = $(this).text();
+	isNone(money_choice);
+	function moneyChange() {
+		if ($(this).text() == "10元") {
+			alert($(this).text());
+			line_sale.find("strong").text("9.8-9.9");
+		}
+	}
+	moneyChange();
+})
+// radio切换只需满足name相同的前提
 
 //不修改类名则标签对click之后的hover事件不起作用
 var isTotop = true;
